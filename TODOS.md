@@ -72,3 +72,12 @@
   - [x] 4. COMMIT
     - [x] git add -A && git commit -m "feat: convert recipe cards to compact summaries with per-dish popup modal"
 
+- [x] 12. PRODUCTION REVIEW & FINAL HARDENING
+  - [x] PROD REVIEW: SEO head meta (OG, Twitter Card, canonical, theme-color), aria-live removal, aria-hidden background toggling for modals, DOM caching, event-delegated card clicks, focus trap, prefers-reduced-motion.
+  - [x] REGRESSION FIX: restore original renderRecipe() monolithic flow after a partial-revert broke first/last section rendering; keep production modal a11y.
+  - [x] FAVICON: replace favicon with flat transparent mushroom SVG + 32px PNG fallback and apple-touch-icon.
+  - [x] FAVICON v2: redesign bold tab-sized silhouette, rename to favicon-v2.* to bust cache, update all icon links.
+  - [x] RESPONSIVE/MOBILE AUDIT: 44px touch targets for lang toggle, CTA buttons, and modal/lightbox close buttons; iOS text-size-adjust + tap-highlight polish; confirm 72rem content max-width and no horizontal overflow at 360–1920px.
+  - [x] VERIFY all widths (360, 390, 414, 768, 1024, 1366, 1440, 1920px): no horizontal scroll, no clipping, comfortable reading width, gallery/modal/video responsive, language toggle usable.
+  - [x] Confirm no layout/branding/HTML/JS regressions; website ready for GitHub Pages deployment.
+
