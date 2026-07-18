@@ -1,0 +1,9 @@
+- [ ] 1. Create folder structure + placeholder files
+- [ ] 2. Build index.html structure (all sections, no styling)
+- [ ] 3. Build style.css (full styling, mobile-first)
+- [ ] 4. Add placeholder images + recipe.pdf placeholder
+- [ ] 5. Add YouTube embed + channel link section
+- [ ] 6. Add SEO/meta tags, favicon, accessibility attributes
+- [ ] 7. Write .gitignore
+- [ ] 8. Write README.md
+- [ ] 9. Final review pass + push
