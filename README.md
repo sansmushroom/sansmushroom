@@ -1,25 +1,25 @@
 # Sans Mushroom Box
 
-This repository contains a lightweight, mobile-first single-page website for Sans Mushroom Box. It is designed to work directly on GitHub Pages with no build step.
+This repository contains a polished, mobile-first static website for Sans Mushroom Box. It is designed to work directly on GitHub Pages without a build step.
 
-## Site structure
+## Current site structure
 
-- index.html — main single-page content for the hero, gallery, recipe, tutorial, video link, and footer
-- style.css — responsive styling with a mobile-first layout and no inner scrolling containers
-- assets/images/ — placeholder images to replace with real mushroom photography
-- assets/recipe.pdf — placeholder recipe PDF to replace with the final file
-- favicon.ico — placeholder favicon
+- index.html — single-page layout with hero, recipe cards, gallery, tutorial video, trust/contact section, and footer
+- style.css — responsive styling with an earthy visual system, mobile-safe spacing, and a lightbox for the gallery
+- script.js — bilingual content rendering and gallery lightbox behavior
+- assets/images/ — mushroom photography placeholders and JPG images
+- assets/recipe.pdf — downloadable recipe PDF
+- assets/videos/packing-tutorial.mp4 — local tutorial video target
+- favicon.svg — site favicon
 
-## What to replace later
+## What to update later
 
-Replace these placeholders with your real business content:
+You can still refine the following content when needed:
 
-- [ ] assets/images/mushroom-1.jpg
-- [ ] assets/images/mushroom-2.jpg
-- [ ] assets/images/mushroom-3.jpg
-- [ ] assets/recipe.pdf
-- [ ] The recipe text in index.html
-- [ ] The YouTube video ID in the iframe src inside index.html
+- assets/images/ — swap in higher-quality product photos
+- assets/recipe.pdf — replace with the final PDF if the printed handout changes
+- assets/videos/packing-tutorial.mp4 — replace with a real recorded tutorial once available
+- script.js — update the bilingual recipe text and contact copy as the business evolves
 
 ## Local preview
 
@@ -41,4 +41,4 @@ https://<your-github-username>.github.io/<repository-name>/
 
 ## QR code note
 
-Once the live URL is active, you can generate a QR code from that URL for customers to scan.
+Once the live URL is active, generate a QR code from that URL for customers to scan.

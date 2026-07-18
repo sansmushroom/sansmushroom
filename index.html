@@ -18,13 +18,13 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <button id="lang-toggle" class="lang-toggle" type="button" aria-pressed="false"></button>
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-pressed="false" aria-label="Switch between English and Malayalam"></button>
 
     <header class="hero-section">
       <p id="hero-eyebrow" class="eyebrow"></p>
       <h1 id="hero-title"></h1>
       <p id="hero-description"></p>
-      <a id="hero-cta" href="#recipe"></a>
+      <a id="hero-cta" href="#recipe" class="hero-cta"></a>
     </header>
 
     <section id="recipe" class="recipe-section" aria-labelledby="recipe-title">
@@ -38,14 +38,14 @@
     <main id="main">
       <section id="gallery" aria-labelledby="gallery-title">
         <h2 id="gallery-title"></h2>
-        <div class="gallery-grid">
-          <figure>
+        <div class="gallery-grid" role="list">
+          <figure class="gallery-card" role="listitem">
             <img src="assets/images/mushroom-1.jpg" alt="Cluster of golden oyster mushrooms on a wooden surface" loading="lazy" />
           </figure>
-          <figure>
+          <figure class="gallery-card" role="listitem">
             <img src="assets/images/mushroom-2.jpg" alt="Fresh mushrooms arranged in a small basket" loading="lazy" />
           </figure>
-          <figure>
+          <figure class="gallery-card" role="listitem">
             <img src="assets/images/mushroom-3.jpg" alt="A tray of baby mushrooms in a warm indoor grow setup" loading="lazy" />
           </figure>
         </div>
@@ -66,7 +66,21 @@
         <p id="videos-text"></p>
         <a id="videos-link" href="https://www.youtube.com/@sansmushroombox" target="_blank" rel="noopener noreferrer"></a>
       </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <h2 id="contact-title"></h2>
+        <p id="contact-text"></p>
+        <div class="contact-actions">
+          <a id="contact-call" href="tel:8156808790"></a>
+          <a id="contact-whatsapp" href="https://wa.me/918156808790" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </section>
     </main>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+      <img id="lightbox-image" src="" alt="" />
+    </div>
 
     <footer>
       <p id="footer-text"></p>
