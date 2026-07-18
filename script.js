@@ -115,6 +115,7 @@ function renderRecipe() {
   const isMalayalam = currentLanguage === 'ml';
   document.body.dataset.lang = currentLanguage;
   document.documentElement.lang = currentLanguage;
+  document.documentElement.setAttribute('lang', currentLanguage);
   document.getElementById('lang-toggle').textContent = data.toggleLabel;
   document.getElementById('lang-toggle').setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Malayalam' : 'Switch to English');
   document.getElementById('lang-toggle').setAttribute('aria-pressed', isMalayalam ? 'true' : 'false');

@@ -16,10 +16,14 @@ This repository contains a polished, mobile-first static website for Sans Mushro
 
 You can still refine the following content when needed:
 
-- assets/images/ — swap in higher-quality product photos
+- assets/images/ — swap in higher-quality product photos when available
 - assets/recipe.pdf — replace with the final PDF if the printed handout changes
 - assets/videos/packing-tutorial.mp4 — replace with a real recorded tutorial once available
 - script.js — update the bilingual recipe text and contact copy as the business evolves
+
+## Open Graph note
+
+The current og:image meta tag uses a relative image path so the page works as a safe default locally. Once the site is published on GitHub Pages, update it to the full absolute URL for the deployed site so WhatsApp and other social platforms can render the preview image correctly.
 
 ## Local preview
 

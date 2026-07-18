@@ -8,7 +8,7 @@
     <meta property="og:title" content="Sans Mushroom Box" />
     <meta property="og:description" content="A simple, mobile-friendly showcase for Sans Mushroom Box with photos, a recipe, and a grow tutorial." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://example.com/assets/images/mushroom-1.jpg" />
+    <meta property="og:image" content="assets/images/mushroom-1.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -40,13 +40,22 @@
         <h2 id="gallery-title"></h2>
         <div class="gallery-grid" role="list">
           <figure class="gallery-card" role="listitem">
-            <img src="assets/images/mushroom-1.jpg" alt="Cluster of golden oyster mushrooms on a wooden surface" loading="lazy" />
+            <img src="assets/images/mushroom-1.jpg" alt="Golden oyster mushrooms clustered on a wooden surface" loading="eager" />
           </figure>
           <figure class="gallery-card" role="listitem">
-            <img src="assets/images/mushroom-2.jpg" alt="Fresh mushrooms arranged in a small basket" loading="lazy" />
+            <img src="assets/images/mushroom-2.jpg" alt="Fresh mushrooms arranged in a neat stack on a wooden tray" loading="lazy" />
           </figure>
           <figure class="gallery-card" role="listitem">
-            <img src="assets/images/mushroom-3.jpg" alt="A tray of baby mushrooms in a warm indoor grow setup" loading="lazy" />
+            <img src="assets/images/mushroom-3.jpg" alt="Small mushrooms growing in a warm indoor setup with a tray and cover" loading="lazy" />
+          </figure>
+          <figure class="gallery-card" role="listitem">
+            <img src="assets/images/mushroom-4.jpg" alt="A close-up of mushrooms resting on a simple kitchen-style surface" loading="lazy" />
+          </figure>
+          <figure class="gallery-card" role="listitem">
+            <img src="assets/images/mushroom-5.jpg" alt="A tray of fresh mushrooms displayed beside natural greenery" loading="lazy" />
+          </figure>
+          <figure class="gallery-card" role="listitem">
+            <img src="assets/images/mushroom-6.jpg" alt="A hand holding a small basket of mushrooms near a window" loading="lazy" />
           </figure>
         </div>
       </section>
@@ -54,7 +63,7 @@
       <section id="tutorial" aria-labelledby="tutorial-title">
         <h2 id="tutorial-title"></h2>
         <div class="video-frame">
-          <video controls width="100%" style="border-radius: 8px;">
+          <video controls preload="metadata" playsinline poster="assets/images/mushroom-1.jpg" style="border-radius: 8px;">
             <source src="assets/videos/packing-tutorial.mp4" type="video/mp4" />
             <span id="video-fallback-text"></span>
           </video>
