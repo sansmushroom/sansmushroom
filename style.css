@@ -19,10 +19,16 @@ html {
 
 body {
   margin: 0;
+  padding-top: 4.5rem;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: linear-gradient(180deg, var(--bg) 0%, #f2e3ca 100%);
+  overflow-x: hidden;
+}
+
+body[data-lang="ml"] {
+  font-family: "Noto Sans Malayalam", "Noto Sans", Arial, sans-serif;
 }
 
 img {
@@ -52,16 +58,31 @@ video {
   padding: 0.75rem 1rem;
 }
 
+.lang-toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1000;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--accent);
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(47, 36, 29, 0.12);
+}
+
 header,
 main,
-footer {
+footer,
+.recipe-section {
   width: min(100%, 72rem);
   margin: 0 auto;
   padding: 1.25rem 1rem 2rem;
 }
 
-header {
-  padding-top: 2rem;
+.hero-section {
+  padding-top: 1rem;
 }
 
 .eyebrow {
@@ -103,7 +124,8 @@ a {
   font-weight: 600;
 }
 
-header a,
+.hero-section a,
+.recipe-section a,
 section a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -114,11 +136,57 @@ section a {
   border-radius: 999px;
 }
 
-header a:hover,
+.hero-section a:hover,
+.recipe-section a:hover,
 section a:hover,
-header a:focus-visible,
+.hero-section a:focus-visible,
+.recipe-section a:focus-visible,
 section a:focus-visible {
   background: var(--accent-2);
+}
+
+.recipe-section {
+  margin-bottom: 1rem;
+}
+
+.recipe-section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-content {
+  display: grid;
+  gap: 1rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.recipe-block,
+.dish-card {
+  background: #fffdf9;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border);
+}
+
+.recipe-block h3,
+.dish-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.recipe-intro p {
+  margin: 0 0 0.35rem;
+}
+
+body[data-lang="ml"] .recipe-content,
+body[data-lang="ml"] .recipe-block,
+body[data-lang="ml"] .dish-card {
+  line-height: 1.8;
 }
 
 .gallery-grid {
@@ -146,9 +214,10 @@ section a:focus-visible {
   background: #000;
 }
 
-.video-frame iframe {
+.video-frame video {
   position: absolute;
   inset: 0;
+  object-fit: cover;
 }
 
 footer {
@@ -157,10 +226,32 @@ footer {
   font-size: 0.95rem;
 }
 
+@media (max-width: 480px) {
+  body {
+    padding-top: 5rem;
+  }
+
+  .lang-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .recipe-section,
+  .hero-section,
+  main,
+  footer {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
 @media (min-width: 700px) {
   header,
   main,
-  footer {
+  footer,
+  .recipe-section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }

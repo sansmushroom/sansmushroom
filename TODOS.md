@@ -1,9 +1,12 @@
-- [ ] 1. Create folder structure + placeholder files
-- [ ] 2. Build index.html structure (all sections, no styling)
-- [ ] 3. Build style.css (full styling, mobile-first)
-- [ ] 4. Add placeholder images + recipe.pdf placeholder
-- [ ] 5. Add YouTube embed + channel link section
-- [ ] 6. Add SEO/meta tags, favicon, accessibility attributes
-- [ ] 7. Write .gitignore
-- [ ] 8. Write README.md
-- [ ] 9. Final review pass + push- [x] Follow-up: switch gallery placeholders to JPGs and use a local video file for the tutorial section
+- [x] 1. Create folder structure + placeholder files
+- [x] 2. Build index.html structure (all sections, no styling)
+- [x] 3. Build style.css (full styling, mobile-first)
+- [x] 4. Add placeholder images + recipe.pdf placeholder
+- [x] 5. Add YouTube embed + channel link section
+- [x] 6. Add SEO/meta tags, favicon, accessibility attributes
+- [x] 7. Write .gitignore
+- [x] 8. Write README.md
+- [x] 9. Final review pass + push
+- [x] Follow-up: switch gallery placeholders to JPGs and use a local video file for the tutorial section
+- [x] Recipe move and bilingual toggle update completed
+- [x] Missing full steps placeholders recorded for: Mushroom Thoran, Mushroom Soup, Mushroom Theeyal, Mushroom & Banana Stem Thoran, Mushroom Pulao, Mushroom Cutlet, Mushroom Omelette
