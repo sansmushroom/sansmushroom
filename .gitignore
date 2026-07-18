@@ -1,9 +1,11 @@
-# OS files
+# Python virtual environment (local tooling, not part of the site)
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS / editor files
 .DS_Store
 Thumbs.db
-
-# Editor files
-.vscode/
-
-# Logs
-*.log

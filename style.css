@@ -592,3 +592,24 @@ body[data-lang="ml"] .recipe-modal-title {
     border: 0;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .dish-card:hover,
+  .dish-card:focus-visible,
+  .gallery-grid img:hover,
+  .gallery-grid img:focus-visible {
+    transform: none;
+  }
+}

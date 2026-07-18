@@ -14,7 +14,7 @@ This repository contains a polished, mobile-first static website for Sans Mushro
 
 ## Recipe display
 
-Each dish is shown on the main page as a compact card (dish name + photo + ingredient count + "View Recipe" affordance). Tapping or clicking a card opens a per-dish popup modal with the full ingredients list and numbered steps, rendered in the currently active language (English or Malayalam). The modal updates live if you switch language while it is open, and closes via the X button, tapping outside, or the Escape key. The general Health Benefits and Cooking Rules stay inline on the main recipe section.
+Each dish is shown on the main page as a compact, text-only card (numbered badge, dish name, ingredient count, and a "View Recipe" affordance — no image). Tapping or clicking a card opens a per-dish popup modal with the full ingredients list and numbered steps, rendered in the currently active language (English or Malayalam). The modal updates live if you switch language while it is open, and closes via the X button, tapping outside, or the Escape key. The general Health Benefits and Cooking Rules stay inline on the main recipe section.
 
 ## What to update later
 
@@ -27,7 +27,7 @@ You can still refine the following content when needed:
 
 ## Open Graph note
 
-The current og:image meta tag uses a relative image path so the page works as a safe default locally. Once the site is published on GitHub Pages, update it to the full absolute URL for the deployed site so WhatsApp and other social platforms can render the preview image correctly.
+The current `og:image` and `twitter:image` meta tags use a relative image path, and the `canonical` link uses a placeholder GitHub Pages URL (`https://sansmushroombox.github.io/`). Once the site is published, replace these with the full absolute URL for the deployed site so WhatsApp, Twitter, and search engines render the preview image and canonical correctly.
 
 ## Local preview
 
