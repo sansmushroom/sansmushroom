@@ -8,6 +8,8 @@ const content = {
     recipeTitle: 'Recipe',
     downloadLabel: 'Download Recipe PDF',
     ingredientsLabel: 'Ingredients',
+    stepsLabel: 'Steps',
+    viewRecipeLabel: 'View Recipe →',
     videoFallbackText: 'Your browser does not support the video tag.',
     header: 'SANS DAILY FRESH',
     location: 'Payyanangadi, Tirur',
@@ -50,6 +52,8 @@ const content = {
     recipeTitle: 'റസിപ്പി',
     downloadLabel: 'റസിപ്പി പിഡിഎഫ് ഡൗൺലോഡ് ചെയ്യൂ',
     ingredientsLabel: 'ഇനങ്ങൾ',
+    stepsLabel: 'ഘട്ടങ്ങൾ',
+    viewRecipeLabel: 'റസിപ്പി കാണൂ →',
     videoFallbackText: 'നിങ്ങളുടെ ബ്രൗസർ വീഡിയോ ടാഗ് പിന്തുണയ്ക്കുന്നില്ല.',
     header: 'സാൻസ് ഡെയ്ലി ഫ്റഷ്',
     location: 'പയ്യാനങ്ങാടി, തിരൂർ',
@@ -174,7 +178,7 @@ const dishes = [
 
 let currentLanguage = 'en';
 
-function renderRecipe() {
+let renderRecipe = function () {
   const data = content[currentLanguage];
   const isMalayalam = currentLanguage === 'ml';
   document.body.dataset.lang = currentLanguage;
@@ -218,20 +222,37 @@ function renderRecipe() {
       <h3>${data.cookingRulesLabel}</h3>
       <ul>${data.cookingRules.map((item) => `<li>${item}</li>`).join('')}</ul>
     </section>
-    ${dishes.map((dish) => {
+    ${dishes.map((dish, index) => {
       const dishData = dish[currentLanguage];
-      const stepsMarkup = dishData.steps && dishData.steps.length > 0
-        ? `<ol>${dishData.steps.map((step) => `<li>${step}</li>`).join('')}</ol>`
-        : '';
+      const count = dishData.ingredients.length;
+      const photo = `assets/images/mushroom-${(index % 6) + 1}.jpg`;
       return `
-        <article class="dish-card">
-          <h3>${dishData.name}</h3>
-          <h4>${data.ingredientsLabel}</h4>
-          <ul>${dishData.ingredients.map((ingredient) => `<li>${ingredient}</li>`).join('')}</ul>
-          ${stepsMarkup}
-        </article>
+        <button type="button" class="dish-card" data-dish-index="${index}" aria-haspopup="dialog" aria-label="${dishData.name} — ${data.viewRecipeLabel}">
+          <img class="dish-card-photo" src="${photo}" alt="" loading="lazy" />
+          <span class="dish-card-name">${dishData.name}</span>
+          <span class="dish-card-teaser">${count} ${data.ingredientsLabel.toLowerCase()}</span>
+          <span class="dish-card-cta">${data.viewRecipeLabel}</span>
+        </button>
       `;
     }).join('')}
+  `;
+}
+
+function populateRecipeModal(index) {
+  const data = content[currentLanguage];
+  const dishData = dishes[index][currentLanguage];
+  const modal = document.getElementById('recipe-modal');
+  const titleId = 'recipe-modal-title';
+  modal.setAttribute('aria-labelledby', titleId);
+  document.getElementById('recipe-modal-title').textContent = dishData.name;
+  const ingredientsList = dishData.ingredients.map((item) => `<li>${item}</li>`).join('');
+  const stepsMarkup = dishData.steps && dishData.steps.length > 0
+    ? `<h3 class="recipe-modal-subtitle">${data.stepsLabel}</h3><ol>${dishData.steps.map((step) => `<li>${step}</li>`).join('')}</ol>`
+    : '';
+  document.getElementById('recipe-modal-body').innerHTML = `
+    <h3 class="recipe-modal-subtitle">${data.ingredientsLabel}</h3>
+    <ul>${ingredientsList}</ul>
+    ${stepsMarkup}
   `;
 }
 
@@ -284,4 +305,71 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+
+  const recipeModal = document.getElementById('recipe-modal');
+  const recipeModalClose = document.getElementById('recipe-modal-close');
+  let lastFocusedCard = null;
+
+  function openRecipeModal(index, trigger) {
+    lastFocusedCard = trigger || document.activeElement;
+    populateRecipeModal(index);
+    recipeModal.hidden = false;
+    document.body.classList.add('recipe-modal-open');
+    recipeModalClose.focus();
+  }
+
+  function closeRecipeModal() {
+    recipeModal.hidden = true;
+    document.body.classList.remove('recipe-modal-open');
+    if (lastFocusedCard && typeof lastFocusedCard.focus === 'function') {
+      lastFocusedCard.focus();
+    }
+    lastFocusedCard = null;
+  }
+
+  function wireDishCards() {
+    const cards = Array.from(document.querySelectorAll('.dish-card[data-dish-index]'));
+    cards.forEach((card) => {
+      const index = Number(card.getAttribute('data-dish-index'));
+      card.addEventListener('click', () => openRecipeModal(index, card));
+    });
+  }
+
+  wireDishCards();
+
+  recipeModalClose.addEventListener('click', closeRecipeModal);
+  recipeModal.addEventListener('click', (event) => {
+    if (event.target === recipeModal) {
+      closeRecipeModal();
+    }
+  });
+
+  const recipeModalFocusable = recipeModal.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+
+  document.addEventListener('keydown', (event) => {
+    if (recipeModal.hidden) return;
+    if (event.key === 'Escape') {
+      closeRecipeModal();
+      return;
+    }
+    if (event.key === 'Tab') {
+      const focusable = recipeModal.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  const originalRenderRecipe = renderRecipe;
+  renderRecipe = function () {
+    originalRenderRecipe();
+    wireDishCards();
+  };
 });
