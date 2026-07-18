@@ -4,13 +4,17 @@ This repository contains a polished, mobile-first static website for Sans Mushro
 
 ## Current site structure
 
-- index.html — single-page layout with hero, recipe cards, gallery, tutorial video, trust/contact section, and footer
-- style.css — responsive styling with an earthy visual system, mobile-safe spacing, and a lightbox for the gallery
-- script.js — bilingual content rendering and gallery lightbox behavior
+- index.html — single-page layout with hero, recipe section, gallery, tutorial video, trust/contact section, and footer
+- style.css — responsive styling with an earthy visual system, mobile-safe spacing, a gallery lightbox, and a per-dish recipe modal
+- script.js — bilingual content rendering, gallery lightbox, and the recipe modal that opens each dish in a popup
 - assets/images/ — mushroom photography placeholders and JPG images
 - assets/recipe.pdf — downloadable recipe PDF
 - assets/videos/packing-tutorial.mp4 — local tutorial video target
 - favicon.svg — site favicon
+
+## Recipe display
+
+Each dish is shown on the main page as a compact card (dish name + photo + ingredient count + "View Recipe" affordance). Tapping or clicking a card opens a per-dish popup modal with the full ingredients list and numbered steps, rendered in the currently active language (English or Malayalam). The modal updates live if you switch language while it is open, and closes via the X button, tapping outside, or the Escape key. The general Health Benefits and Cooking Rules stay inline on the main recipe section.
 
 ## What to update later
 
