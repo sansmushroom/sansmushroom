@@ -6,4 +6,4 @@
 - [ ] 6. Add SEO/meta tags, favicon, accessibility attributes
 - [ ] 7. Write .gitignore
 - [ ] 8. Write README.md
-- [ ] 9. Final review pass + push
+- [ ] 9. Final review pass + push- [x] Follow-up: switch gallery placeholders to JPGs and use a local video file for the tutorial section

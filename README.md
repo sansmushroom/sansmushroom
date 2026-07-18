@@ -14,9 +14,9 @@ This repository contains a lightweight, mobile-first single-page website for San
 
 Replace these placeholders with your real business content:
 
-- [ ] assets/images/mushroom-1.svg
-- [ ] assets/images/mushroom-2.svg
-- [ ] assets/images/mushroom-3.svg
+- [ ] assets/images/mushroom-1.jpg
+- [ ] assets/images/mushroom-2.jpg
+- [ ] assets/images/mushroom-3.jpg
 - [ ] assets/recipe.pdf
 - [ ] The recipe text in index.html
 - [ ] The YouTube video ID in the iframe src inside index.html
