@@ -1,12 +1,45 @@
-- [x] 1. Create folder structure + placeholder files
-- [x] 2. Build index.html structure (all sections, no styling)
-- [x] 3. Build style.css (full styling, mobile-first)
-- [x] 4. Add placeholder images + recipe.pdf placeholder
-- [x] 5. Add YouTube embed + channel link section
-- [x] 6. Add SEO/meta tags, favicon, accessibility attributes
-- [x] 7. Write .gitignore
-- [x] 8. Write README.md
-- [x] 9. Final review pass + push
-- [x] Follow-up: switch gallery placeholders to JPGs and use a local video file for the tutorial section
-- [x] Recipe move and bilingual toggle update completed
-- [x] Missing full steps placeholders recorded for: Mushroom Thoran, Mushroom Soup, Mushroom Theeyal, Mushroom & Banana Stem Thoran, Mushroom Pulao, Mushroom Cutlet, Mushroom Omelette
+- [ ] 0. Branding text fix
+  - [ ] Change the hero eyebrow text from "Family-Grown Mushrooms" to "Home-Grown Mushrooms" everywhere it appears (both English and Malayalam versions in the content object — provide an accurate Malayalam translation for "Home-Grown Mushrooms • Fresh From the Box", do not leave Malayalam untranslated).
+  - [ ] Search the whole codebase for any other instance of "family" / "farm" language implying a large commercial farm, and adjust to reflect a home-based/small-batch operation instead.
+- [ ] 1. Design system
+  - [ ] Define CSS custom properties (:root variables) for: primary color, secondary/accent color, background tones, text colors, spacing scale (--space-1 through --space-6), border-radius scale, and shadow levels. Use an earthy, natural palette (warm browns, cream, sage green accents) — refine the existing palette rather than replacing it if it already looks good.
+  - [ ] Set a clear typographic scale (heading sizes, body size, line-heights) applied consistently across ALL sections, not just recipe cards.
+  - [ ] Ensure every background/text color pairing meets WCAG AA contrast, including recipe card tints.
+- [ ] 2. Recipe cards
+  - [ ] Each of the 7 dishes is a distinct card: soft background tint, clear border, generous padding, consistent spacing rhythm between heading → ingredients → steps.
+  - [ ] Steps are numbered/ordered lists, not run-on paragraphs, in both languages.
+  - [ ] Extend the EXISTING bilingual content object in script.js — do not create a parallel/duplicate data structure.
+  - [ ] Malayalam font: 'Noto Sans Malayalam', sans-serif, line-height ~1.8. Fallback stack must render Malayalam legibly without overlapping conjuncts even if Google Fonts fails to load — test this with network blocked as a case.
+  - [ ] Test recipe cards at 360px, 390px, and 414px widths in both languages — no overflow, no clipping, comfortable spacing between cards.
+- [ ] 3. Hero section upgrade
+  - [ ] Clear visual hierarchy: eyebrow text → headline → subtext → CTA button. Consider a subtle background texture or gradient.
+  - [ ] CTA button ("See the recipe") smooth-scrolls to the recipe section.
+  - [ ] Hero content never collides with the fixed language toggle button at any width from 320px up.
+- [ ] 4. Gallery polish
+  - [ ] Keep existing real photos. Add subtle hover/tap effect (slight scale or shadow).
+  - [ ] Add a lightweight lightbox (vanilla JS, no library) — tap photo to open larger, close on tap-outside or close button, works on mobile touch, doesn't trap scroll.
+  - [ ] Flag in TODOS.md if any image file is unusually large and should be compressed.
+- [ ] 5. Trust & contact section
+  - [ ] Simple contact/trust section near footer: business name, location (Payyanangadi, Tirur), tap-to-call phone link (tel:8156808790), WhatsApp link (https://wa.me/918156808790).
+  - [ ] Bilingual, using the same content object pattern.
+- [ ] 6. Video section check
+  - [ ] packing-tutorial.mp4 has proper controls, poster/thumbnail if easy to generate, does not autoplay.
+  - [ ] Video container stays responsive (16:9, no layout shift) at all widths.
+- [ ] 7. Performance & SEO
+  - [ ] Meta tags: title, description, viewport, Open Graph (og:title, og:description, og:image using a mushroom photo, og:type).
+  - [ ] loading="lazy" on all images except the first hero-adjacent one.
+  - [ ] No render-blocking issues; defer non-critical JS if needed.
+  - [ ] Favicon correctly referenced in <head>.
+- [ ] 8. Accessibility pass
+  - [ ] All images have descriptive alt text (English is fine).
+  - [ ] Interactive elements (toggle, lightbox, CTA, WhatsApp link) are keyboard-accessible with aria-labels where needed.
+  - [ ] Logical heading hierarchy: one h1, h2 per section, h3 for dish names — verify and fix if broken.
+- [ ] 9. Final cross-check
+  - [ ] Test full page at 360px, 390px, 414px, 768px, 1400px, in both languages.
+  - [ ] Zero horizontal scroll, zero console errors, zero broken links/missing assets.
+  - [ ] Language toggle swaps ALL visible text (hero, recipe, contact) with no leftover hardcoded strings in either language.
+  - [ ] Update README.md: replace outdated "what to replace later" section with accurate current project state and instructions for future recipe edits.
+  - [ ] Mark every item in TODOS.md complete, or clearly flag anything left unfinished and why.
+- [ ] 10. Final commit
+  - [ ] git add -A
+  - [ ] git commit -m "polish: complete design system, trust/contact section, gallery lightbox, SEO, accessibility, and final responsive QA"
