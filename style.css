@@ -1,33 +1,34 @@
 :root {
   color-scheme: light;
-  --color-primary: #6f4625;
-  --color-accent: #4e6b3f;
-  --color-bg: #f7efe3;
-  --color-bg-2: #efe0c4;
-  --color-panel: #fffaf2;
-  --color-panel-2: #f5ebda;
-  --color-text: #2f241d;
-  --color-text-soft: #6d5743;
-  --color-border: #d7c0a3;
+  --color-primary: #7a4a22;
+  --color-accent: #5c7c4d;
+  --color-bg: #f7efe0;
+  --color-bg-2: #efe0c5;
+  --color-panel: #fffaf1;
+  --color-panel-2: #f4e8d6;
+  --color-text: #2e241d;
+  --color-text-soft: #69513d;
+  --color-border: #d9c3a8;
+  --color-surface: #fcf7ee;
   --space-1: 0.35rem;
   --space-2: 0.6rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --radius-sm: 0.6rem;
-  --radius-md: 0.95rem;
-  --radius-lg: 1.25rem;
-  --shadow-sm: 0 4px 16px rgba(47, 36, 29, 0.08);
-  --shadow-md: 0 10px 24px rgba(47, 36, 29, 0.12);
-  --shadow-lg: 0 18px 40px rgba(47, 36, 29, 0.16);
+  --space-3: 0.95rem;
+  --space-4: 1.35rem;
+  --space-5: 1.9rem;
+  --space-6: 2.7rem;
+  --radius-sm: 0.65rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.35rem;
+  --shadow-sm: 0 4px 14px rgba(46, 36, 29, 0.08);
+  --shadow-md: 0 10px 24px rgba(46, 36, 29, 0.12);
+  --shadow-lg: 0 18px 36px rgba(46, 36, 29, 0.16);
   --font-size-body: 1rem;
   --font-size-small: 0.95rem;
-  --font-size-h1: clamp(2.15rem, 5vw, 3.2rem);
-  --font-size-h2: clamp(1.35rem, 3vw, 1.9rem);
+  --font-size-h1: clamp(2.2rem, 5vw, 3.2rem);
+  --font-size-h2: clamp(1.35rem, 3vw, 1.8rem);
   --font-size-h3: 1.1rem;
-  --line-height-body: 1.7;
-  --line-height-heading: 1.2;
+  --line-height-body: 1.75;
+  --line-height-heading: 1.15;
   --line-height-ml: 1.8;
 }
 
@@ -48,6 +49,17 @@ body {
   color: var(--color-text);
   background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-2) 100%);
   overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(122, 74, 34, 0.08) 0.8px, transparent 0.8px);
+  background-size: 18px 18px;
+  opacity: 0.24;
+  z-index: -1;
 }
 
 body[data-lang="ml"] {
@@ -105,9 +117,9 @@ footer,
 }
 
 .hero-section {
-  padding-top: 1rem;
+  padding: 1.45rem 1.1rem 1.6rem;
   position: relative;
-  background: linear-gradient(135deg, rgba(255,250,242,0.92), rgba(245,235,218,0.9));
+  background: linear-gradient(135deg, rgba(255,250,242,0.95), rgba(244,232,214,0.95));
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
@@ -126,7 +138,7 @@ footer,
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: var(--line-height-heading);
 }
 
 h1 {
@@ -151,6 +163,12 @@ section {
   padding: 1.25rem;
   margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
+}
+
+section p,
+section li,
+.recipe-intro p {
+  color: var(--color-text-soft);
 }
 
 a {
@@ -201,11 +219,38 @@ section a:focus-visible {
 
 .recipe-block,
 .dish-card {
-  background: linear-gradient(135deg, rgba(255,250,242,0.95), rgba(245,235,218,0.9));
+  background: linear-gradient(135deg, rgba(255,250,242,0.96), rgba(244,232,214,0.94));
   padding: 1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
+}
+
+.dish-card {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.dish-card h3 {
+  color: var(--color-primary);
+}
+
+.dish-card h4 {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.dish-card ol,
+.dish-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.dish-card li + li {
+  margin-top: 0.45rem;
 }
 
 .recipe-block h3,
@@ -254,7 +299,7 @@ body[data-lang="ml"] .dish-card {
 
 .gallery-grid img:hover,
 .gallery-grid img:focus-visible {
-  transform: scale(1.03);
+  transform: scale(1.025);
   box-shadow: var(--shadow-md);
 }
 
@@ -303,10 +348,33 @@ body.lightbox-open {
   gap: 0.8rem;
 }
 
+.contact-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  padding: 0.9rem 1rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.contact-business {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.contact-location {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-soft);
+}
+
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.contact-actions a {
+  margin-top: 0;
 }
 
 .video-frame {
@@ -352,6 +420,10 @@ footer {
 
   .hero-section {
     padding-top: 1.2rem;
+  }
+
+  .hero-section .hero-cta {
+    margin-top: 0.8rem;
   }
 }
 

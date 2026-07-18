@@ -1,9 +1,9 @@
 const content = {
   en: {
     toggleLabel: 'English / മലയാളം',
-    heroEyebrow: 'Home-grown mushrooms • Fresh from the box',
+    heroEyebrow: 'Home-Grown Mushrooms • Fresh from the box',
     heroTitle: 'Sans Mushroom Box',
-    heroDescription: 'Small-batch mushrooms and hands-on growing inspiration for curious home cooks.',
+    heroDescription: 'Small-batch mushrooms and simple growing inspiration for curious home cooks.',
     heroCta: 'See the recipe',
     recipeTitle: 'Recipe',
     downloadLabel: 'Download Recipe PDF',
@@ -35,15 +35,17 @@ const content = {
     videosLinkLabel: 'Watch on YouTube',
     contactTitle: 'Contact & trust',
     contactText: 'Small-batch mushrooms, warm kitchen tips, and friendly guidance from home to table.',
+    contactBusiness: 'Sans Mushroom Box',
+    contactLocation: 'Payyanangadi, Tirur',
     contactCallLabel: 'Call now',
     contactWhatsAppLabel: 'WhatsApp us',
     footerText: '© 2026 Sans Mushroom Box. All rights reserved.'
   },
   ml: {
     toggleLabel: 'English / മലയാളം',
-    heroEyebrow: 'വീട്ടിൽ വളർത്തിയ കൂൺ • ബോക്സിൽ നിന്ന് തണുത്തു വരുന്നത്',
+    heroEyebrow: 'വீട്ടിൽ വളർത്തിയ കൂൺ • ബോക്സിൽ നിന്ന് തണുത്തു വരുന്നത്',
     heroTitle: 'സാൻസ് മഷ്റൂം ബോക്സ്',
-    heroDescription: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺകളും, വീട്ടിൽ തൊട്ടുപിടിക്കുന്ന പാചക ഇച്ഛയും.',
+    heroDescription: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺകളും, വീട്ടിൽ തൊട്ടുപിടിക്കുന്ന വളർത്തൽ അരിച്ചുമാറ്റലുകളും.',
     heroCta: 'റസിപ്പി കാണൂ',
     recipeTitle: 'റസിപ്പി',
     downloadLabel: 'റസിപ്പി പിഡിഎഫ് ഡൗൺലോഡ് ചെയ്യൂ',
@@ -73,6 +75,12 @@ const content = {
     videosTitle: 'കൂടുതൽ വീഡിയോകൾ',
     videosText: 'കൂടുതൽ വളർത്തൽ ഉപകാരം, കൂൺ റസിപ്പികൾ, പിന്നണിയിൽ നിന്നുള്ള അധ്യായങ്ങൾക്കായി നമ്മുടെ യൂട്യൂബ് ചാനൽ കാണൂ.',
     videosLinkLabel: 'യൂട്യൂബ് വീഡിയോകൾ കാണൂ',
+    contactTitle: 'സമ്പർക്കം & വിശ്വസനീയത',
+    contactText: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺ, ചൂടുള്ള പാചകനുറുക്കുകൾ, വീട്ടിൽ നിന്നും മേശയിലേക്കുള്ള സൗഹൃദവുമായോപദേശം.',
+    contactBusiness: 'സാൻസ് മഷ്റൂം ബോക്സ്',
+    contactLocation: 'പയ്യാനങ്ങാടി, തിരൂർ',
+    contactCallLabel: 'ഇപ്പോൾ വിളിക്കൂ',
+    contactWhatsAppLabel: 'വാട്ട്സ്ആപ്പ് അയക്കൂ',
     footerText: '© 2026 സാൻസ് മഷ്റൂം ബോക്സ്. എല്ലാ അവകാശങ്ങളും വെച്ചിരിക്കുന്നു.'
   }
 };
@@ -132,6 +140,8 @@ function renderRecipe() {
   document.getElementById('videos-link').textContent = data.videosLinkLabel;
   document.getElementById('contact-title').textContent = data.contactTitle;
   document.getElementById('contact-text').textContent = data.contactText;
+  document.getElementById('contact-business').textContent = data.contactBusiness;
+  document.getElementById('contact-location').textContent = data.contactLocation;
   document.getElementById('contact-call').textContent = data.contactCallLabel;
   document.getElementById('contact-whatsapp').textContent = data.contactWhatsAppLabel;
   document.getElementById('footer-text').textContent = data.footerText;
