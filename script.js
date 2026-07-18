@@ -178,40 +178,36 @@ const dishes = [
 
 let currentLanguage = 'en';
 
-const el = {};
-function getEl(id) {
-  if (!el[id]) el[id] = document.getElementById(id);
-  return el[id];
-}
-
-const STATIC_KEYS = [
-  'lang-toggle', 'hero-eyebrow', 'hero-title', 'hero-description', 'hero-cta',
-  'recipe-title', 'recipe-download', 'gallery-title', 'tutorial-title',
-  'videos-title', 'videos-text', 'videos-link', 'contact-title', 'contact-text',
-  'contact-business', 'contact-location', 'contact-call', 'contact-whatsapp',
-  'footer-text', 'video-fallback-text'
-];
-
-function renderStaticText() {
+function renderRecipe() {
   const data = content[currentLanguage];
   const isMalayalam = currentLanguage === 'ml';
   document.body.dataset.lang = currentLanguage;
   document.documentElement.lang = currentLanguage;
+  document.documentElement.setAttribute('lang', currentLanguage);
+  document.getElementById('lang-toggle').textContent = data.toggleLabel;
+  document.getElementById('lang-toggle').setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Malayalam' : 'Switch to English');
+  document.getElementById('lang-toggle').setAttribute('aria-pressed', isMalayalam ? 'true' : 'false');
+  document.getElementById('hero-eyebrow').textContent = data.heroEyebrow;
+  document.getElementById('hero-title').textContent = data.heroTitle;
+  document.getElementById('hero-description').textContent = data.heroDescription;
+  document.getElementById('hero-cta').textContent = data.heroCta;
+  document.getElementById('recipe-title').textContent = data.recipeTitle;
+  document.getElementById('recipe-download').textContent = data.downloadLabel;
+  document.getElementById('gallery-title').textContent = data.galleryTitle;
+  document.getElementById('tutorial-title').textContent = data.tutorialTitle;
+  document.getElementById('videos-title').textContent = data.videosTitle;
+  document.getElementById('videos-text').textContent = data.videosText;
+  document.getElementById('videos-link').textContent = data.videosLinkLabel;
+  document.getElementById('contact-title').textContent = data.contactTitle;
+  document.getElementById('contact-text').textContent = data.contactText;
+  document.getElementById('contact-business').textContent = data.contactBusiness;
+  document.getElementById('contact-location').textContent = data.contactLocation;
+  document.getElementById('contact-call').textContent = data.contactCallLabel;
+  document.getElementById('contact-whatsapp').textContent = data.contactWhatsAppLabel;
+  document.getElementById('footer-text').textContent = data.footerText;
+  document.getElementById('video-fallback-text').textContent = data.videoFallbackText;
 
-  const toggle = getEl('lang-toggle');
-  toggle.textContent = data.toggleLabel;
-  toggle.setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Malayalam' : 'Switch to English');
-  toggle.setAttribute('aria-pressed', isMalayalam ? 'true' : 'false');
-
-  for (const key of STATIC_KEYS) {
-    if (key === 'lang-toggle') continue;
-    getEl(key).textContent = data[key];
-  }
-}
-
-function renderDishCards() {
-  const data = content[currentLanguage];
-  const recipeContent = getEl('recipe-content');
+  const recipeContent = document.getElementById('recipe-content');
   recipeContent.innerHTML = `
     <div class="recipe-intro">
       <p><strong>${data.header}</strong></p>
@@ -242,21 +238,17 @@ function renderDishCards() {
   `;
 }
 
-function renderRecipe() {
-  renderStaticText();
-  renderDishCards();
-}
-
 function populateRecipeModal(index) {
   const data = content[currentLanguage];
   const dishData = dishes[index][currentLanguage];
-  getEl('recipe-modal').setAttribute('aria-labelledby', 'recipe-modal-title');
-  getEl('recipe-modal-title').textContent = `${index + 1}. ${dishData.name}`;
+  const modal = document.getElementById('recipe-modal');
+  modal.setAttribute('aria-labelledby', 'recipe-modal-title');
+  document.getElementById('recipe-modal-title').textContent = `${index + 1}. ${dishData.name}`;
   const ingredientsList = dishData.ingredients.map((item) => `<li>${item}</li>`).join('');
   const stepsMarkup = dishData.steps && dishData.steps.length > 0
     ? `<h3 class="recipe-modal-subtitle">${data.stepsLabel}</h3><ol>${dishData.steps.map((step) => `<li>${step}</li>`).join('')}</ol>`
     : '';
-  getEl('recipe-modal-body').innerHTML = `
+  document.getElementById('recipe-modal-body').innerHTML = `
     <h3 class="recipe-modal-subtitle">${data.ingredientsLabel}</h3>
     <ul>${ingredientsList}</ul>
     ${stepsMarkup}
@@ -264,17 +256,18 @@ function populateRecipeModal(index) {
 }
 
 function setBackgroundHidden(hidden) {
-  const main = getEl('main');
+  const main = document.getElementById('main');
   if (main) main.toggleAttribute('aria-hidden', hidden);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   renderRecipe();
-  getEl('lang-toggle').addEventListener('click', () => {
+  document.getElementById('lang-toggle').addEventListener('click', () => {
     currentLanguage = currentLanguage === 'en' ? 'ml' : 'en';
     renderRecipe();
   });
 
+  // Gallery lightbox
   const galleryImages = Array.from(document.querySelectorAll('.gallery-card img'));
   const lightbox = document.getElementById('lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
@@ -320,6 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Recipe modal
   const recipeModal = document.getElementById('recipe-modal');
   const recipeModalClose = document.getElementById('recipe-modal-close');
   let lastFocusedCard = null;
@@ -343,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lastFocusedCard = null;
   }
 
-  const recipeContent = getEl('recipe-content');
+  const recipeContent = document.getElementById('recipe-content');
   recipeContent.addEventListener('click', (event) => {
     const card = event.target.closest('.dish-card[data-dish-index]');
     if (!card) return;
