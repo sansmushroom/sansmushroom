@@ -229,6 +229,7 @@ section a:focus-visible {
 .dish-card {
   display: grid;
   gap: 0.5rem;
+  padding-top: 1.15rem;
   text-align: left;
   font: inherit;
   color: inherit;
@@ -250,11 +251,20 @@ section a:focus-visible {
   outline-offset: 2px;
 }
 
-.dish-card-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
+.dish-card-badge {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .dish-card-name {

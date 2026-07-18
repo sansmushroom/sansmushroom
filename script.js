@@ -225,10 +225,10 @@ let renderRecipe = function () {
     ${dishes.map((dish, index) => {
       const dishData = dish[currentLanguage];
       const count = dishData.ingredients.length;
-      const photo = `assets/images/mushroom-${(index % 6) + 1}.jpg`;
+      const position = index + 1;
       return `
-        <button type="button" class="dish-card" data-dish-index="${index}" aria-haspopup="dialog" aria-label="${dishData.name} — ${data.viewRecipeLabel}">
-          <img class="dish-card-photo" src="${photo}" alt="" loading="lazy" />
+        <button type="button" class="dish-card" data-dish-index="${index}" aria-haspopup="dialog" aria-label="${position}. ${dishData.name} — ${data.viewRecipeLabel}">
+          <span class="dish-card-badge">${position}</span>
           <span class="dish-card-name">${dishData.name}</span>
           <span class="dish-card-teaser">${count} ${data.ingredientsLabel.toLowerCase()}</span>
           <span class="dish-card-cta">${data.viewRecipeLabel}</span>
@@ -244,7 +244,7 @@ function populateRecipeModal(index) {
   const modal = document.getElementById('recipe-modal');
   const titleId = 'recipe-modal-title';
   modal.setAttribute('aria-labelledby', titleId);
-  document.getElementById('recipe-modal-title').textContent = dishData.name;
+  document.getElementById('recipe-modal-title').textContent = `${index + 1}. ${dishData.name}`;
   const ingredientsList = dishData.ingredients.map((item) => `<li>${item}</li>`).join('');
   const stepsMarkup = dishData.steps && dishData.steps.length > 0
     ? `<h3 class="recipe-modal-subtitle">${data.stepsLabel}</h3><ol>${dishData.steps.map((step) => `<li>${step}</li>`).join('')}</ol>`
