@@ -48,3 +48,27 @@
   - [x] Update README.md with accurate project state and instructions for future recipe edits, including the og:image note for GitHub Pages.
   - [x] Mark every item in TODOS.md complete or clearly explain anything left unfinished.
 
+- [ ] 11. COMPACT DISH CARDS + RECIPE MODAL
+  - [ ] 1. COMPACT DISH CARDS
+    - [ ] Each of the 7 dish cards on the main page shows only: dish name (bilingual), and a short teaser (ingredient count), styled consistently with existing card design.
+    - [ ] Add a clear visual affordance that the card is clickable (cursor pointer, subtle hover/tap effect, "View Recipe →" label).
+    - [ ] Health Benefits and Cooking Rules sections stay inline on the main page.
+  - [ ] 2. RECIPE MODAL (per-dish popup)
+    - [ ] ONE reusable modal component that populates dynamically from the existing bilingual data object.
+    - [ ] Modal shows dish name heading, full ingredients list, full numbered steps in the active language.
+    - [ ] Modal respects current language toggle state and updates live if language switches while open.
+    - [ ] Close via visible X button, outside click, and Escape key.
+    - [ ] Background scroll-lock while open; restore on close.
+    - [ ] Mobile touch friendly; near-fullscreen on mobile, centered card on desktop; internal scroll if long.
+    - [ ] Keyboard accessible: focus moves in on open, returns to trigger on close; reachable/dismissible via keyboard.
+    - [ ] aria-modal="true", role="dialog", aria-labelledby pointing to dish name.
+    - [ ] Distinct class/ID from the gallery lightbox; no conflict.
+  - [ ] 3. VERIFICATION
+    - [ ] Test opening/closing all 7 dish modals in English and Malayalam.
+    - [ ] Test at 360px, 390px, 414px, 768px, 1400px — no viewport overflow / horizontal scroll.
+    - [ ] Confirm page height significantly shorter than before.
+    - [ ] Confirm zero console errors.
+    - [ ] Update TODOS.md and README.md (recipe now opens in popup per dish).
+  - [ ] 4. COMMIT
+    - [ ] git add -A && git commit -m "feat: convert recipe cards to compact summaries with per-dish popup modal"
+
