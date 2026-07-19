@@ -32,6 +32,30 @@
   --line-height-ml: 1.8;
 }
 
+@font-face {
+  font-family: "Noto Sans Malayalam";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/noto-sans-malayalam-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans Malayalam";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/noto-sans-malayalam-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans Malayalam";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/noto-sans-malayalam-700.woff2") format("woff2");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -66,6 +90,10 @@ body::before {
 }
 
 body[data-lang="ml"] {
+  font-family: "Noto Sans Malayalam", "Noto Sans", Arial, sans-serif;
+}
+
+:lang(ml) {
   font-family: "Noto Sans Malayalam", "Noto Sans", Arial, sans-serif;
 }
 
