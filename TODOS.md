@@ -81,3 +81,21 @@
   - [x] VERIFY all widths (360, 390, 414, 768, 1024, 1366, 1440, 1920px): no horizontal scroll, no clipping, comfortable reading width, gallery/modal/video responsive, language toggle usable.
   - [x] Confirm no layout/branding/HTML/JS regressions; website ready for GitHub Pages deployment.
 
+- [x] 13. MALAYALAM TRANSLATION FIX
+  - [x] Scan all Malayalam text in index.html and script.js for accidental Tamil Unicode characters (U+0B80–U+0BFF) and Telugu characters (U+0C00–U+0C7F) mixed into Malayalam words.
+  - [x] Replace corrupted characters in 4 words: വീട്ടിൽ, ആരോഗ്യ, കുറവാക, and corrupted syllable in Mushroom Banana Stem Thoran steps.
+  - [x] Verify zero non-Malayalam Indic characters remain in any translation string.
+  - [x] Confirm English translations are completely unchanged.
+
+- [x] 14. DEFAULT LANGUAGE CHANGE
+  - [x] Change default language from English to Malayalam to match target audience in Kerala.
+  - [x] Update html lang attribute in index.html from en to ml.
+  - [x] Update currentLanguage variable in script.js from 'en' to 'ml'.
+  - [x] Verify language toggle continues working correctly in both directions.
+  - [x] Confirm all sections update correctly when switching languages.
+
+- [x] 15. VIDEO POSTER UPDATE
+  - [x] Extract representative frame at 2.5s from assets/videos/packing-tutorial.mp4 using ffmpeg.
+  - [x] Save optimized WebP poster as assets/images/packing-tutorial-poster.webp (5kB).
+  - [x] Update video poster attribute in index.html to reference new WebP image.
+  - [x] Preserve mushroom-1.jpg for OG image, Twitter Card, and gallery use.
