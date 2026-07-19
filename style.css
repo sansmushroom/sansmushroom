@@ -69,6 +69,10 @@ body[data-lang="ml"] {
   font-family: "Noto Sans Malayalam", "Noto Sans", Arial, sans-serif;
 }
 
+:lang(ml) {
+  letter-spacing: normal !important;
+}
+
 img {
   display: block;
   width: 100%;
@@ -136,11 +140,14 @@ footer,
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.2em;
   font-size: 0.8rem;
   color: var(--color-accent);
   margin-bottom: 0.5rem;
   font-weight: 700;
+}
+
+:lang(en) .eyebrow {
+  letter-spacing: 0.2em;
 }
 
 h1,
@@ -576,6 +583,9 @@ body.recipe-modal-open {
   color: var(--color-accent);
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+:lang(en) .recipe-modal-subtitle {
   letter-spacing: 0.1em;
 }
 
