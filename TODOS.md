@@ -99,3 +99,22 @@
   - [x] Save optimized WebP poster as assets/images/packing-tutorial-poster.webp (5kB).
   - [x] Update video poster attribute in index.html to reference new WebP image.
   - [x] Preserve mushroom-1.jpg for OG image, Twitter Card, and gallery use.
+
+- [x] 16. MALAYALAM RECIPE CORRECTION
+  - [x] Verified all 7 Malayalam recipes in script.js against approved source text.
+  - [x] Corrected corrupted Cyrillic characters in Recipe 1 step (10 മിനിട്ട്).
+  - [x] Corrected Tamil character in Recipe 3 ingredient 3 (வറ്റൽമുളക് → വറ്റൽമുളക്).
+  - [x] Standardized spelling across all recipes per owner-approved revisions.
+  - [x] Reverted all Malayalam recipes to match owner-provided raw approved text exactly.
+  - [x] Confirmed zero mismatches via automated comparison script.
+
+- [x] 17. GROW TUTORIAL SECTION REORDER
+  - [x] Moved #tutorial section in index.html to appear immediately below #recipe and above #gallery.
+  - [x] Final page order: Hero → Recipe → Grow Tutorial → Photo Gallery → More Videos → Contact → Footer.
+  - [x] Verified exactly one #tutorial section exists; all IDs remain unique.
+  - [x] No CSS, JavaScript, or other HTML modified.
+
+- [x] 18. CONTENT.ML BRANDING VALUES
+  - [x] Updated header, location, phone, contactBusiness, contactLocation in content.ml to use non-transliterated English values.
+  - [x] All other Malayalam text in content.ml preserved unchanged.
+  - [x] English content object (content.en) not touched.

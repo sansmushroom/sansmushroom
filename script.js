@@ -1,9 +1,9 @@
 const content = {
   en: {
     toggleLabel: 'English / മലയാളം',
-    heroEyebrow: 'Home-Grown Mushrooms • Fresh from the box',
+    heroEyebrow: '',
     heroTitle: 'Sans Mushroom Box',
-    heroDescription: 'Small-batch mushrooms and simple growing inspiration for curious home cooks.',
+    heroDescription: '',
     heroCta: 'See the recipe',
     recipeTitle: 'Recipe',
     downloadLabel: 'Download Recipe PDF',
@@ -24,12 +24,8 @@ const content = {
       'Brain health',
       'Rich source of Vitamin D'
     ],
-    cookingRulesLabel: 'Cooking Rules',
-    cookingRules: [
-      'Keep oil low',
-      'Add minimal water',
-      'Prep by rubbing mushrooms with turmeric powder for 5–10 minutes before cooking'
-    ],
+    cookingRulesLabel: '',
+    cookingRules: [],
     galleryTitle: 'Photo gallery',
     tutorialTitle: 'Grow tutorial',
     videosTitle: 'More videos',
@@ -45,9 +41,9 @@ const content = {
   },
   ml: {
     toggleLabel: 'English / മലയാളം',
-    heroEyebrow: 'വീട്ടിൽ വളർത്തിയ കൂൺ • ബോക്സിൽ നിന്ന് തണുത്തു വരുന്നത്',
-    heroTitle: 'സാൻസ് മഷ്റൂം ബോക്സ്',
-    heroDescription: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺകളും, വീട്ടിൽ തൊട്ടുപിടിക്കുന്ന വളർത്തൽ അരിച്ചുമാറ്റലുകളും.',
+    heroEyebrow: '',
+    heroTitle: 'Sans Mushroom Box',
+    heroDescription: '',
     heroCta: 'റസിപ്പി കാണൂ',
     recipeTitle: 'റസിപ്പി',
     downloadLabel: 'റസിപ്പി പിഡിഎഫ് ഡൗൺലോഡ് ചെയ്യൂ',
@@ -68,12 +64,8 @@ const content = {
       'മനസിന്റെ ആരോഗ്യവും',
       'വിറ്റാമിൻ ഡി നിറഞ്ഞവ'
     ],
-    cookingRulesLabel: 'പാകത്തിന്റെ നിയമങ്ങൾ',
-    cookingRules: [
-      'എണ്ണ കുറവാക വേണം',
-      'കുറഞ്ഞ വെള്ളം ചേർക്കണം',
-      'പാകത്തിന് മുൻപായി കൂൺ മഞ്ഞൾപ്പൊടി കൊണ്ട് 5–10 മിനിറ്റ് രസമായി തേച്ച് വെക്കണം'
-    ],
+    cookingRulesLabel: '',
+    cookingRules: [],
     galleryTitle: 'ചിത്രശാല',
     tutorialTitle: 'വളർത്തൽ ട്യൂട്ടോറിയൽ',
     videosTitle: 'കൂടുതൽ വീഡിയോകൾ',
@@ -94,7 +86,7 @@ const dishes = [
     en: {
       name: 'Mushroom Thoran',
       ingredients: [
-        '200g Mushrooms',
+        '200 gm Mushrooms',
         '1/4 tsp Turmeric powder',
         '3/4 cup Grated coconut',
         '1/4 tsp Fennel seeds',
@@ -134,8 +126,8 @@ const dishes = [
     en: {
       name: 'Mushroom Soup',
       ingredients: [
-        '200g Mushrooms',
-        '50g Butter/Ghee',
+        '200 gm Mushrooms',
+        '50 gm Butter/Ghee',
         '1/4 tsp Black pepper powder',
         '1 tbsp Arrowroot powder/Cornflour',
         'Salt (to taste)',
@@ -172,7 +164,7 @@ const dishes = [
     en: {
       name: 'Mushroom Theeyal',
       ingredients: [
-        '200g Sliced mushrooms',
+        '200 gm Sliced mushrooms',
         '2 cups Grated coconut',
         '5 Dried red chillies',
         '1 tsp Coriander seeds',
@@ -291,7 +283,7 @@ const dishes = [
       name: 'Mushroom Cutlet',
       ingredients: [
         '1 cup Mushrooms',
-        '150g Potatoes',
+        '150 gm Potatoes',
         '2 Onions (sliced)',
         '1 Grated carrot',
         '1 tsp Garam masala powder',
@@ -328,7 +320,7 @@ const dishes = [
     en: {
       name: 'Mushroom Omelette',
       ingredients: [
-        '50g Mushrooms',
+        '50 gm Mushrooms',
         '1 Egg',
         '1 tsp Milk',
         '1 tsp Chopped shallots',
@@ -355,7 +347,7 @@ const dishes = [
       ]
     }
   }
-];let currentLanguage = 'ml';
+]; let currentLanguage = 'ml';
 
 function renderRecipe() {
   const data = content[currentLanguage];
@@ -397,15 +389,15 @@ function renderRecipe() {
       <h3>${data.healthBenefitsLabel}</h3>
       <ul>${data.healthBenefits.map((item) => `<li>${item}</li>`).join('')}</ul>
     </section>
-    <section class="recipe-block">
+    ${data.cookingRulesLabel ? `<section class="recipe-block">
       <h3>${data.cookingRulesLabel}</h3>
       <ul>${data.cookingRules.map((item) => `<li>${item}</li>`).join('')}</ul>
-    </section>
+    </section>` : ''}
     ${dishes.map((dish, index) => {
-      const dishData = dish[currentLanguage];
-      const count = dishData.ingredients.length;
-      const position = index + 1;
-      return `
+    const dishData = dish[currentLanguage];
+    const count = dishData.ingredients.length;
+    const position = index + 1;
+    return `
         <button type="button" class="dish-card" data-dish-index="${index}" aria-haspopup="dialog" aria-label="${position}. ${dishData.name} — ${data.viewRecipeLabel}">
           <span class="dish-card-badge">${position}</span>
           <span class="dish-card-name">${dishData.name}</span>
@@ -413,7 +405,7 @@ function renderRecipe() {
           <span class="dish-card-cta">${data.viewRecipeLabel}</span>
         </button>
       `;
-    }).join('')}
+  }).join('')}
   `;
 }
 
