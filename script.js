@@ -93,90 +93,269 @@ const dishes = [
   {
     en: {
       name: 'Mushroom Thoran',
-      ingredients: ['200g Mushroom', 'Turmeric', 'Coconut', 'Fennel', 'Cardamom', 'Clove', 'Cinnamon', 'Black Pepper', 'Curry Leaves', 'Coconut Oil'],
-      steps: ['Shred mushrooms, crush slightly in a mixer, and rub with turmeric powder. Sauté finely chopped onion, garlic, and ginger in ghee, then add black pepper powder. Add tomatoes, mix well, add mushrooms, and cook for 10 minutes. Pour diluted arrowroot powder solution, add salt, mix in finely chopped celery and capsicum, and serve hot.']
+      ingredients: [
+        '200g Mushrooms',
+        '1/4 tsp Turmeric powder',
+        '3/4 cup Grated coconut',
+        '1/4 tsp Fennel seeds',
+        '1 Cardamom',
+        '1 Cinnamon stick',
+        '1 Clove',
+        '1/4 tsp Black pepper powder',
+        'Curry leaves (as needed)',
+        'Salt (to taste)',
+        '1 tbsp Coconut oil'
+      ],
+      steps: [
+        'Clean and shred the mushrooms into small pieces, rub with turmeric powder, and set aside to marinate for 10 minutes. After that, add the coarsely ground mixture of ingredients 3 to 10 (grated coconut, fennel seeds, cardamom, cinnamon, clove, black pepper powder, curry leaves, and salt) to the cooked mushrooms and steam briefly. Remove from heat, drizzle with coconut oil, mix well, and serve.'
+      ]
     },
     ml: {
       name: 'കൂൺ തോരൻ',
-      ingredients: ['200g കൂൺ', 'മഞ്ഞൾപ്പൊടി', 'തെങ്ങ്', 'പൊടിച്ച വെന്തക്ക', 'ഏലക്ക', 'ഗ്രാമ്പൂ', 'ജാതിക്ക', 'കറുവപ്പട്ട', 'കരിഞ്ചട ഇല', 'തെങ്ങിനെയ്യ്'],
-      steps: ['കൂൺ ചെറിയ കഷ്‌ണങ്ങളാക്കി കീറി മിക്സിയിൽ ഒതുക്കിയെടുത്ത് മഞ്ഞൾ പുരട്ടി വെക്കുക. നെയ്യിൽ ഉള്ളി, വെളുത്തുള്ളി, ഇഞ്ചി ഇവ ചെറുതായി അരിഞ്ഞ് വഴറ്റിയതിൽ കുരുമുളകുപൊടി ചേർത്ത് വീണ്ടും വഴറ്റുക. ഇതിലേക്ക് തക്കാളി ചേർത്ത് വഴറ്റി കൂൺ ഇട്ട് 10 മിനിറ്റ് വേവിക്കുക. ഇതിലേക്ക് നേർപ്പിച്ച കൂവപ്പൊടി ലായനി ആവശ്യത്തിന് ഒഴിച്ച് ഉപ്പ് ചേർത്ത് സെലറി, ക്യാപ്സിക്കം ഇവ ചെറുതായി അരിഞ്ഞിട്ട് ചൂടോടെ ഉപയോഗിക്കാം.']
+      ingredients: [
+        '1. കൂൺ – 200 ഗ്രാം',
+        '2. മഞ്ഞൾപൊടി – കാൽ റ്റീസ്പൂൺ',
+        '3. തേങ്ങ ചിരകിയത് – മുക്കാൽ കപ്പ്',
+        '4. പെരുംജീരകം – കാൽ റ്റീ സ്പൂൺ',
+        '5. ഏലയ്ക്ക – 1 എണ്ണം',
+        '6. കറുവ – 1 എണ്ണം',
+        '7. ഗ്രാമ്പു – 1 എണ്ണം',
+        '8. കുരുമുളക്പൊടി – കാൽ റ്റീ സ്പൂൺ',
+        '9. കറിവേപ്പില – ആവശ്യത്തിന്',
+        '10. ഉപ്പ് – പാകത്തിന്',
+        '11.  – വെളിച്ചെണ്ണ 1 ടേബിൾ സ്പൂൺ'
+      ],
+      steps: [
+        'കൂൺ ചെറിയ കഷണങ്ങളാക്കി കീറിയെടുത്ത് മഞ്ഞൾപൊടി പുരട്ടി 10 മിനിട്ട് വെയ്ക്കുക. അതിനു ശേഷം വേവിച്ച കൂണിൽ 3 മുതൽ 10 വരെയുള്ള ചേരുവകൾ ഒതുക്കിയെടുത്തത് ഇട്ട് അൽപനേരം ആവികയറ്റി ഇറ ക്കിയതിനുശേഷം വെള്ളിചെണ്ണ ചേർത്ത് ഇളക്കിയെടുത്ത് ഉപയോഗിക്കാം'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom Soup',
-      ingredients: ['200g Mushroom', 'Butter/Ghee', 'Black Pepper', 'Arrowroot/Cornflour', 'Tomato', 'Shallots', 'Garlic', 'Ginger', 'Turmeric'],
-      steps: ['Chop mushrooms into small pieces and marinate with turmeric powder for 10 minutes. Add crushed ingredients to the cooked mushrooms, steam briefly, stir well, mix in coconut oil, and serve.']
+      ingredients: [
+        '200g Mushrooms',
+        '50g Butter/Ghee',
+        '1/4 tsp Black pepper powder',
+        '1 tbsp Arrowroot powder/Cornflour',
+        'Salt (to taste)',
+        '1 Tomato',
+        '1 Shallot',
+        '1 Garlic clove',
+        '1 small piece of Ginger',
+        '1/4 tsp Turmeric powder'
+      ],
+      steps: [
+        'Chop the mushrooms into small pieces, crush them slightly in a mixer, rub with turmeric powder, and set aside. Heat butter or ghee in a pan, sauté finely chopped shallot, garlic, and ginger, then add black pepper powder and sauté again. Add finely chopped tomato and sauté well. Add the mushrooms and cook for 10 minutes. Pour in the diluted arrowroot or cornflour solution as needed, add salt, mix in finely chopped celery and capsicum, and serve hot.'
+      ]
     },
     ml: {
-      name: 'കൂൺ സുപ്പ്',
-      ingredients: ['200g കൂൺ', 'വെണ്ണ/നെയ്യ്', 'കറുവപ്പട്ട', 'ആറൗറൂട്ട്/കോർൻഫ്ലവർ', 'തക്കാളി', 'ചെറുകരിവേറ', 'വഴുതുവഴി', 'ഇഞ്ചി', 'മഞ്ഞൾപ്പൊടി'],
-      steps: ['കൂൺ ചെറിയ കഷണങ്ങളാക്കി കീറിയെടുത്ത് മഞ്ഞൾപ്പൊടി പുരട്ടി 10 മിനിറ്റ് വെക്കുക. അതിനുശേഷം വേവിച്ച കൂണിൽ ചേരുവകൾ ഒതുക്കിയെടുത്ത് ഇട്ട് അല്പനേരം ആവികയറ്റി ഇളക്കിയതിനുശേഷം വെള്ളിച്ചെണ്ണ ചേർത്ത് ഇളക്കിയെടുത്ത് ഉപയോഗിക്കാം.']
+      name: 'കൂൺ സൂപ്പ്',
+      ingredients: [
+        '1. കൂൺ – 200 ഗ്രാം',
+        '2. ബട്ടർ/നെയ്യ് – 50 ഗ്രാം',
+        '3. കുരുമുളകുപൊടി – കാൽ റ്റീ സ്പൂൺ',
+        '4. കൂവപ്പൊടി/കോൺഫ്ളവർ – 1 ടേബിൾ സ്പൂൺ',
+        '5. ഉപ്പ് – പാകത്തിന്',
+        '6. തക്കാളി – 1 എണ്ണം',
+        '7. ചെറിയ ഉള്ളി – 1 എണ്ണം',
+        '8. വെളുത്തുള്ളി – 1 അല്ലി',
+        '9. ഇഞ്ചി – 1 ചെറിയ കഷ്ണം',
+        '10. മഞ്ഞൾപൊടി – കാൽ റ്റീസ്പൂൺ'
+      ],
+      steps: [
+        'കൂൺ ചെറിയ കഷ്ണങ്ങളാക്കി കീറി മിക്സിയിൽ ഒതുക്കിയെടുത്ത് മഞ്ഞൾ പുരട്ടി വെയ്ക്കുക. നെയ്യിൽ ഉള്ളി വെളുത്തുള്ളി ഇഞ്ചി ഇവ ചെറുതായി അരിഞ്ഞ് വഴറ്റിയതിൽ കുരുമുളകുപൊടി ചേർത്ത് വീണ്ടും വഴറ്റുക. ഇതിലേക്ക് തക്കാളി ചെറുതായി അരിഞ്ഞത് ചേർത്ത് വഴറ്റി കൂൺ ഇട്ട് 10 മിനിട്ട് വേവിക്കുക. ഇതിലേക്ക് നേർപ്പിച്ച കൂവപ്പൊടി ലായനി ആവശ്യത്തിന് ഒഴിച്ച് ഉപ്പ് ചേർത്ത് സെലറി, ക്യാപ്സിക്കം ഇവകൾ ചെറുതായി അരിഞ്ഞു ഇട്ട് ചൂടോടെ ഉപയോഗിക്കാവുന്നതാണ്.'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom Theeyal',
-      ingredients: ['Roasted Coconut base', 'Tamarind juice', 'Green Chillies', 'Shallots', 'Garlic', 'Coriander', 'Fenugreek'],
-      steps: ['Roast dried red chillies, coriander seeds, fenugreek seeds, black pepper, garlic, and grated coconut in oil until golden brown, then grind into a smooth paste. Heat oil and sauté halved shallots, green chillies, and mushrooms. Add 2 cups of water and salt, cook over low heat, then stir in the ground coconut paste and extracted tamarind juice, bringing it to a boil. Garnish with tempered mustard seeds and coriander leaves.']
+      ingredients: [
+        '200g Sliced mushrooms',
+        '2 cups Grated coconut',
+        '5 Dried red chillies',
+        '1 tsp Coriander seeds',
+        '1 pinch Fenugreek seeds',
+        '4 Black peppercorns',
+        '1 tsp Turmeric powder',
+        '2 Shallots',
+        '2 Green chillies',
+        '2 Garlic cloves',
+        'A gooseberry-sized ball of Tamarind',
+        'Salt and Curry leaves (as needed)'
+      ],
+      steps: [
+        'Roast dried red chillies, coriander seeds, fenugreek seeds, black peppercorns, garlic, and grated coconut together in a little oil until golden brown, then grind into a smooth, fine paste. Heat oil in a pan and sauté the halved shallots, green chillies, and sliced mushrooms. Add 2 cups of water and salt, and cook over low heat. Stir in the ground coconut paste and extracted tamarind juice, and bring the mixture to a boil. Garnish with tempered mustard seeds and fresh coriander leaves before serving.'
+      ]
     },
     ml: {
-      name: 'കൂൺ തെയ്യൽ',
-      ingredients: ['വറുത്ത തെങ്ങിൻ പിണ്ണാക്ക്', 'പുളിക്കുരു', 'പച്ചമുളക്', 'ചെറുകരിവേറ', 'വഴുതുവഴി', 'കൊത്തമ്പൊടി', 'ഉഴുന്ന്'],
-      steps: ['വറ്റൽമുളക്, കൊത്തമല്ലി, ഉലുവ, കുരുമുളക്, വെളുത്തുള്ളി, തേങ്ങ ചിരകിയത് എന്നിവ ഒന്നാകെ അല്പം എണ്ണയിൽ ചുവക്കെ വറുത്തെടുത്ത് നല്ല മയത്തിൽ അരച്ചെടുക്കണം. എണ്ണ ചൂടാക്കി രണ്ടായി അരിഞ്ഞ ചുവന്നുള്ളി, പച്ചമുളക്, കൂൺ എന്നിവ വഴറ്റിയെടുക്കണം. പിന്നീട് 2 കപ്പ് വെള്ളം, ഉപ്പ് എന്നിവ ചേർത്ത് ചെറുതീയിൽ വേവിച്ച് തേങ്ങാക്കൂട്ട് അരച്ചതും പുളി പിഴിഞ്ഞതും ചേർത്ത് ഒന്നുകൂടി തിളപ്പിച്ചെടുക്കണം. കടുക് വറുത്തതും മല്ലിയിലയും ചേർത്ത് ഉപയോഗിക്കാം.']
+      name: 'കൂൺ തീയൽ',
+      ingredients: [
+        '1. കൂൺ അരിഞ്ഞത് – 200 ഗ്രാം',
+        '2. തേങ്ങ ചിരകിയത് – 2 കപ്പ്',
+        '3. വറ്റൽമുളക് – 5 എണ്ണം',
+        '4. കൊത്തമല്ലി – 1 റ്റീസ്പൂൺ',
+        '5. ഉലുവ – 1 നുള്ള് ',
+        '6. കുരുമുളക് – 4 എണ്ണം',
+        '7. മഞ്ഞൾപൊടി – 1 റ്റീസ്പൂൺ',
+        '8. ചുവന്നുള്ളി – 2 എണ്ണം',
+        '9. പച്ചമുളക് – 2 എണ്ണം',
+        '10. വെളുത്തുള്ളി – 2 അല്ലി',
+        '11. വാളൻപുളി – നെല്ലിക്കാവലുപ്പത്തിൽ ഉരുട്ടിയത്',
+        '12. ഉപ്പ്, കറിവേപ്പില – ആവശ്യത്തിന്'
+      ],
+      steps: [
+        'വറ്റൽമുളക്, കൊത്തമല്ലി, ഉലുവ, കുരുമുളക്, വെളുത്തുള്ളി, തേങ്ങ ചിരകിയത് എന്നിവ ഒന്നാകെ അല്പം എണ്ണയിൽ ചുവക്കെ വറുത്തെടുത്ത് നല്ല മയത്തിൽ അരച്ചെടുക്കണം. എണ്ണ ചൂടാക്കി രണ്ടായി അരിഞ്ഞ ചുവന്നുള്ളി, പച്ചമുളക്, കൂൺ എന്നിവ വഴറ്റിയെടുക്കണം. പിന്നീട് 2 കപ്പ് വെള്ളം ഉപ്പ് എന്നിവ ചേർത്ത് ചെറുതീയിൽ വേവിച്ച് തേങ്ങാക്കൂട്ട് അരച്ചതും പുളി പിഴിഞ്ഞതും ചേർത്ത് ഒന്നുകൂടി തിളപ്പിച്ചെടുക്കണം. കൂടെ കടുകുവറുത്തതും മല്ലിയിലയും ചേർത്ത് ഉപയോഗിക്കാവുന്നതാണ്.'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom & Banana Stem Thoran',
-      ingredients: ['Mushroom', 'Banana stem', 'Coconut', 'Spices', 'Curry leaves'],
-      steps: ['Grind dried red chillies, garlic, and turmeric powder smoothly, then add grated coconut and shallots to grind coarsely. Heat oil, splutter mustard seeds and curry leaves, then add chopped mushrooms, finely chopped banana stem, and a little water. Cover and cook well. Add the ground mixture and salt, stirring until moisture evaporates.']
+      ingredients: [
+        '1/2 cup Finely chopped mushrooms',
+        '1/2 cup Chopped banana stem (choond)',
+        '1/2 cup Grated coconut',
+        '4 Shallots',
+        '3 Dried red chillies',
+        '2 Garlic cloves',
+        '1 tsp Turmeric powder',
+        '1/2 tsp Mustard seeds',
+        'Salt and Curry leaves (as needed)'
+      ],
+      steps: [
+        'Grind the dried red chillies, garlic, and turmeric powder into a smooth paste, then add the grated coconut and shallots, grinding them coarsely. Heat oil in a pan, splutter the mustard seeds and curry leaves, then add the chopped mushrooms, chopped banana stem, and a little water. Cover the pan and cook thoroughly. Once cooked, add the ground coconut mixture and salt, stirring continuously until all the water evaporates and the dish is well combined.'
+      ]
     },
     ml: {
-      name: 'കൂൺ - വാഴക്കുമ്പ് തോരൻ',
-      ingredients: ['കൂൺ', 'വാഴക്കുമ്പ്', 'തെങ്ങ്', 'മസാലകൾ', 'കരിഞ്ചട ഇല'],
-      steps: ['വറ്റൽമുളക്, വെളുത്തുള്ളി, മഞ്ഞൾപ്പൊടി ഇവ നല്ല മയത്തിൽ അരച്ച് അതിൽ നാളികേരം, ചുവന്നുള്ളി ഇവ ചേർത്ത് തരുതരുപ്പായി അരച്ചെടുക്കണം. എണ്ണ ചൂടാക്കി കടുകും കറിവേപ്പിലയും മൂപ്പിച്ചു, അരിഞ്ഞ കൂണുമ് അരിഞ്ഞ വാഴച്ചുണ്ടും കുറച്ചു വെള്ളവും ചേർത്ത് പാത്രം അടച്ചുവെച്ച് നന്നായി വേവിക്കണം. വെന്തുകഴിഞ്ഞാൽ അരപ്പും പാകത്തിന് ഉപ്പും ചേർത്ത് വെള്ളം വറ്റുന്നതുവരെ നന്നായി ഇളക്കി പാചകം ചെയ്തെടുക്കണം.']
+      name: 'കൂൺ – വാഴക്കുമ്പ് തോരൻ',
+      ingredients: [
+        '1. കൂൺ പൊടിയായി അരിഞ്ഞത് – അരക്കപ്പ്',
+        '2. വാഴക്കുമ്പ് (ചുണ്ട്) അരിഞ്ഞത് – അരക്കപ്പ്',
+        '3. തേങ്ങ ചിരകിയത് – അരക്കപ്പ്',
+        '4. ചുവന്നുള്ളി – 4 എണ്ണം',
+        '5. വറ്റൽമുളക് – 3 എണ്ണം',
+        '6. വെളുത്തുള്ളി – 2 അല്ലി',
+        '7. മഞ്ഞൾപൊടി – 1 റ്റീസ്പൂൺ',
+        '8. കടുക് – അര റ്റീ സ്പൂൺ',
+        '9. ഉപ്പ്, കറിവേപ്പില – ആവശ്യത്തിന്'
+      ],
+      steps: [
+        'വറ്റൽമുളക്, വെളുത്തുള്ളി, മഞ്ഞൾപ്പൊടി ഇവ നല്ല മയത്തിൽ അരച്ച് അതിൽ നാളികേരം, ചുവന്നുള്ളി ഇവ ചേർത്ത് തരുതരുപ്പായി അരച്ചെടുക്കണം. എണ്ണ ചൂടാക്കി കടുകും കറിവേപ്പിലയും മൂപ്പിച്ച്, അരിഞ്ഞ കൂണും അരിഞ്ഞ വാഴച്ചുണ്ടും കുറച്ചു വെള്ളവും ചേർത്ത് പാത്രം അടച്ചുവെച്ച് നന്നായി വേവിക്കണം. വെന്തുകഴിഞ്ഞാൽ അരപ്പും പാകത്തിന് ഉപ്പു ചേർത്ത് വെള്ളം വറ്റുന്നതുവരെ നന്നായി ഇളക്കി പാചകം ചെയ്തെടുക്കണം.'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom Pulao',
-      ingredients: ['Biryani rice', 'Green peas', 'Carrots', 'Onions', 'Spices', 'Lemon juice'],
-      steps: ['Heat oil and sauté chopped onions, tomatoes, and green chillies. Add mushrooms and green peas to cook. Wash and soak Biryani rice in water for half an hour, then fry the rice lightly in oil before cooking it separately. Mix the cooked rice thoroughly with the sautéed masala, salt, and lemon juice.']
+      ingredients: [
+        '1 cup Biryani rice',
+        '1 cup Sliced mushrooms',
+        '1/4 cup Green peas',
+        '1/2 cup Grated carrot',
+        '2 Onions (sliced)',
+        '2 Green chillies',
+        '1 Tomato',
+        '1/2 tsp Garam masala powder',
+        '2 tbsp Vanaspati (Dalda)',
+        '1 tbsp Lemon juice',
+        'Coriander leaves, Mint leaves, and Salt (to taste)'
+      ],
+      steps: [
+        'Heat oil in a pan and sauté the sliced onions, tomato, and green chillies until soft. Add the mushrooms and green peas, and cook them well. Wash and soak the Biryani rice in water for half an hour, then drain and fry the rice lightly in a little oil. Cook the fried rice separately. Finally, gently mix the cooked rice with the sautéed masala, salt, and lemon juice to prepare the delicious Mushroom Pulao.'
+      ]
     },
     ml: {
       name: 'കൂൺ പുലാവ്',
-      ingredients: ['ബിര്യാനി അരി', 'പച്ചപയർ', 'കാരറ്റ്', 'വഴുതൻ', 'മസാലകൾ', 'നാരങ്ങാനീർ'],
-      steps: ['എണ്ണ ചൂടാക്കി അതിൽ സവാള, തക്കാളി, പച്ചമുളക് എന്നിവ അരിഞ്ഞ് നന്നായി വഴറ്റിയെടുക്കണം. കൂണും പച്ചപ്പട്ടാണിയും ചേർത്ത് വേവിച്ചെടുക്കണം. നന്നായി കഴുകി അരമണിക്കൂർ വെള്ളത്തിൽ കുതിർത്തെടുത്ത ബിരിയാണി അരി എണ്ണയിൽ അല്പസമയം വറുത്തെടുത്തണം. ഇങ്ങനെ വറുത്തെടുത്ത അരി പിന്നീട് പ്രത്യേകമായി വേവിച്ചെടുക്കണം. ഈ ചോറുമായി എണ്ണയിൽ വഴറ്റിയ മസാല, ഉപ്പ്, നാരങ്ങാനീർ എന്നിവ ചേർത്ത് നന്നായി ഇളക്കി തയ്യാറാക്കാം.']
+      ingredients: [
+        '1. ബിരിയാണി അരി – 1 കപ്പ്',
+        '2. കൂൺ അരിഞ്ഞത് – 1 കപ്പ്',
+        '3. പട്ടാണി – കാൽ കപ്പ്',
+        '4. ക്യാരറ്റ് ചുരണ്ടിയത് – അര കപ്പ്',
+        '5. സവാള (അരിഞ്ഞത്) – 2 എണ്ണം',
+        '6. പച്ചമുളക് – 2 എണ്ണം',
+        '7. തക്കാളി – 1 എണ്ണം',
+        '8. മസാലപ്പൊടി – അര ടീ സ്പൂൺ',
+        '9. വനസ്പതി (ഡാൽഡ) – 2 ടേബിൾ സ്പൂൺ',
+        '10. നാരങ്ങാനീര് – 1 ടേബിൾ സ്പൂൺ',
+        '11. മല്ലിയില, പുതിന, ഉപ്പ് – പാകത്തിന്'
+      ],
+      steps: [
+        'എണ്ണ ചൂടാക്കി അതിൽ സവാള, തക്കാളി, പച്ചമുളക് എന്നിവ അരിഞ്ഞ് നന്നായി വഴറ്റിയെടുക്കണം. കൂണും പച്ചപ്പട്ടാണിയും ചേർത്ത് വേവിച്ചെടുക്കണം. നന്നായി കഴുകി അരമണിക്കൂർ വെള്ളത്തിൽ കുതിർത്തെടുത്ത ബിരിയാണി അരി എണ്ണയിൽ അൽപസമയം വറുത്തെടുക്കണം. ഇങ്ങനെ വറുത്തെടുത്ത അരി പിന്നീട് പ്രത്യേകം വേവിച്ചെടുക്കണം. ഈ ചോറുമായി എണ്ണയിൽ വഴറ്റിയ മസാല, ഉപ്പ്, നാരങ്ങാനീര് എന്നിവ ചേർത്ത് നന്നായി ഇളക്കിയെടുത്ത് കൂൺ പുലാവ് തയ്യാറാക്കാം.'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom Cutlet',
-      ingredients: ['Boiled Potatoes', 'Bread crumbs', 'Masala mix', 'Fried crispy'],
-      steps: ['Finely chop and separately cook the mushrooms. Boil and mash the potatoes. Sauté chopped green chillies, onions, spices, and vegetables lightly, then combine with the cooked mushrooms, mashed potatoes, and salt. Shape into cutlets, dip in beaten egg, coat with breadcrumbs, and fry in oil.']
+      ingredients: [
+        '1 cup Mushrooms',
+        '150g Potatoes',
+        '2 Onions (sliced)',
+        '1 Grated carrot',
+        '1 tsp Garam masala powder',
+        'Green peas (a little)',
+        '4 Chopped green chillies',
+        '1 tsp Chopped ginger',
+        '1 Egg',
+        'Breadcrumbs and Salt (as needed)'
+      ],
+      steps: [
+        'Finely chop the mushrooms and cook them separately. Boil and mash the potatoes. Sauté the chopped green chillies, onions, spices, and other vegetables in a little oil, then combine them with the cooked mushrooms, mashed potatoes, and salt. Mix and knead everything thoroughly. Shape the mixture into small balls, flatten them into cutlets, dip in beaten egg, coat with breadcrumbs, and fry in oil until golden brown and crispy.'
+      ]
     },
     ml: {
       name: 'കൂൺ കട്ലറ്റ്',
-      ingredients: ['അരയ്ക്കുന്നത്', 'ബ്രഡ്കർമ്പുകൾ', 'മസാല മിശ്രണം', 'കുറച്ചു കുരുമുളക്'],
-      steps: ['കൂൺ ചെറുതായി അരിഞ്ഞ് പ്രത്യേകം വേവിച്ചെടുക്കണം. ഉരുളക്കിഴങ്ങ് പുഴുങ്ങി പൊടിച്ചെടുക്കുക. പച്ചമുളക്, സവാള, മസാല, മറ്റു പച്ചക്കറികൾ എന്നിവ അല്പം വഴറ്റി വേവിച്ച കൂൺ, പൊടിച്ച ഉരുളക്കിഴങ്ങ്, ഉപ്പ് എന്നിവ ചേർത്ത് നന്നായി കുഴച്ചെടുക്കണം. ചെറിയ ഉരുളകളാക്കി കട്ലറ്റിന്റെ ആകൃതിയിൽ രൂപപ്പെടുത്തി, അടിച്ചുപതച്ച മുട്ടയിൽ മുക്കി റൊട്ടിപ്പൊടി പുരട്ടി എണ്ണയിൽ വറുത്തെടുക്കുക.']
+      ingredients: [
+        '1. കൂൺ – 1 കപ്പ്',
+        '2. ഉരുളക്കിഴങ്ങ് – 150 ഗ്രാം',
+        '3. സവാള (അരിഞ്ഞത്) – 2 എണ്ണം',
+        '4. ക്യാരറ്റ് ചുരണ്ടിയത് – 1 എണ്ണം',
+        '5. മസാലപ്പൊടി – 1 റ്റീ സ്പൂൺ',
+        '6. പച്ചപ്പട്ടാണി – അൽപം',
+        '7. പച്ചമുളക് അരിഞ്ഞത് – 4 എണ്ണം',
+        '8. ഇഞ്ചി അരിഞ്ഞത് – 1 ടീ സ്പൂൺ',
+        '9. മുട്ട – ഒരെണ്ണം',
+        '10. റൊട്ടിപ്പൊടി, ഉപ്പ് – ആവശ്യത്തിന്'
+      ],
+      steps: [
+        'കൂൺ ചെറുതായി അരിഞ്ഞ് പ്രത്യേകം വേവിച്ചെടുക്കണം. ഉരുളക്കിഴങ്ങ് പുഴുങ്ങി പൊടിച്ചെടുക്കുക, പച്ചമുളക്, സവാള, മസാല മറ്റു പച്ചക്കറികൾ എന്നിവ അല്പം വഴറ്റി വേവിച്ച കൂൺ, പൊടിച്ച ഉരുളക്കിഴങ്ങ്, ഉപ്പ് എന്നിവ ചേർത്ത് നന്നായി കുഴച്ചെടുക്കണം. ചെറിയ ഉരുളകളായി ഉരുട്ടി കട്ലറ്റിന്റെ ആകൃതിയിൽ രൂപപ്പെടുത്തി അടിച്ചു പതച്ച മുട്ടയിൽ മുക്കി റൊട്ടിപ്പൊടി പുരട്ടി എണ്ണയിൽ വറുത്തെടുത്താൽ കട്ലറ്റ് തയ്യാറായി.'
+      ]
     }
   },
   {
     en: {
       name: 'Mushroom Omelette',
-      ingredients: ['Eggs', 'Milk', 'Shallots', 'Green Chillies', 'Pepper'],
-      steps: ['Sauté chopped onions, green chillies, and chopped mushrooms in a little oil. Whisk eggs thoroughly with milk, black pepper powder, salt, and curry leaves, combine with the sautéed mixture, and cook into an omelette.']
+      ingredients: [
+        '50g Mushrooms',
+        '1 Egg',
+        '1 tsp Milk',
+        '1 tsp Chopped shallots',
+        '1 tsp Chopped green chillies',
+        'Salt, Oil, and Black pepper powder (to taste)'
+      ],
+      steps: [
+        'Sauté the chopped shallots, green chillies, and sliced mushrooms in a little oil. Whisk the egg thoroughly with milk, black pepper powder, salt, and curry leaves. Combine the whisked egg with the sautéed mushroom mixture, pour into a hot pan, and cook until a fluffy omelette is formed.'
+      ]
     },
     ml: {
       name: 'കൂൺ ഓംലെറ്റ്',
-      ingredients: ['മുട്ട', 'പാൽ', 'ചെറുകരിവേറ', 'പച്ചമുളക്', 'കുരുമുളക്'],
-      steps: ['ആവശ്യമായ ഉള്ളി, പച്ചമുളക്, കൂൺ അരിഞ്ഞത് എന്നിവ അല്പം എണ്ണയിൽ വഴറ്റിയെടുക്കണം. ഇതിൽ മുട്ട അടിച്ചുചേർത്ത് പാലും കുരുമുളകുപൊടിയും ഉപ്പും കറിവേപ്പിലയും പാകത്തിന് ചേർത്ത് നന്നായി പതപ്പിച്ചു ഓംലെറ്റ് ഉണ്ടാക്കാം.']
+      ingredients: [
+        '1. കൂൺ – 50 ഗ്രാം',
+        '2. മുട്ട – ഒരെണ്ണം',
+        '3. പാൽ – 1 ടി സ്പൂൺ',
+        '4. ചുവന്നുള്ളി അരിഞ്ഞത് – 1 ടി സ്പൂൺ',
+        '5. പച്ചമുളക് അരിഞ്ഞത് – 1 ടി സ്പൂൺ',
+        '6. ഉപ്പ്, എണ്ണ, കുരുമുളകുപൊടി – പാകത്തിന്'
+      ],
+      steps: [
+        'ആവശ്യമായ ഉള്ളി, പച്ചമുളക്, കൂൺ അരിഞ്ഞത് എന്നിവ അല്പം എണ്ണയിൽ വഴറ്റിയെടുക്കണം. ഇതിൽ മുട്ട അടിച്ചുചേർത്ത് പാലും കുരുമുളകുപൊടിയും ഉപ്പും കറിവേപ്പിലയും പാകത്തിന് ചേർത്ത് നന്നായി പതപ്പിച്ച് ഓംലെറ്റ് ഉണ്ടാക്കാം',
+        'കൂടാതെ കൂൺ ഫ്രൈ, കൂൺ, തക്കാളി, മസാല ഫ്രൈ, കൂൺ സാൻവിച്ച്, ചില്ലി മഷ്റൂം, കൂൺ ബജി തുടങ്ങി അനേകം വിഭവങ്ങൾ കൂൺ ഉപയോഗിച്ച് തയ്യാറാക്കാം '
+      ]
     }
   }
-];
-
-let currentLanguage = 'ml';
+];let currentLanguage = 'ml';
 
 function renderRecipe() {
   const data = content[currentLanguage];
