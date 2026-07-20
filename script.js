@@ -33,7 +33,7 @@ const content = {
     videosText: 'Visit our YouTube channel for more growing tips, mushroom recipes, and behind-the-scenes updates.',
     videosLinkLabel: 'Watch on YouTube',
     contactTitle: 'Contact',
-    contactText: 'Small-batch mushrooms, warm kitchen tips, and friendly guidance from home to table.',
+    contactText: '',
     contactBusiness: 'Sans Mushroom Box',
     contactLocation: 'Payyanangadi, Tirur',
     contactCallLabel: 'Call now',
@@ -46,7 +46,7 @@ const content = {
     heroTitle: 'Sans Mushroom Box',
     heroDescription: '',
     heroCta: 'See the Recipe',
-    heroOrder: 'ഓർഡർ ചെയ്യൂ',
+    heroOrder: 'Order Now',
     recipeTitle: 'Recipe',
     downloadLabel: 'Download Recipe PDF',
     ingredientsLabel: 'ഇനങ്ങൾ',
@@ -68,18 +68,18 @@ const content = {
     ],
     cookingRulesLabel: '',
     cookingRules: [],
-    galleryTitle: 'ചിത്രശാല',
+    galleryTitle: 'Photo Gallery',
     tutorialTitle: 'കൂൺ എങ്ങനെ വളർത്താം',
-    videosTitle: 'കൂടുതൽ വീഡിയോകൾ',
-    videosText: 'കൂടുതൽ വളർത്തൽ ഉപകാരം, കൂൺ റസിപ്പികൾ, പിന്നണിയിൽ നിന്നുള്ള അധ്യായങ്ങൾക്കായി നമ്മുടെ യൂട്യൂബ് ചാനൽ കാണൂ.',
+    videosTitle: 'More Videos',
+    videosText: 'കൂടുതൽ കൂൺ വളർത്തൽ ടിപ്പുകൾ, കൂൺ റസിപ്പികൾ, ഏറ്റവും പുതിയ വിവരങ്ങൾ എന്നിവയ്ക്കായി ഞങ്ങളുടെ YouTube ചാനൽ സന്ദർശിക്കൂ.',
     videosLinkLabel: 'Watch on YouTube',
-    contactTitle: 'ബന്ധപ്പെടുക',
-    contactText: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺ, ചൂടുള്ള പാചകനുറുക്കുകൾ, വീട്ടിൽ നിന്നും മേശയിലേക്കുള്ള സൗഹൃദവുമായോപദേശം.',
+    contactTitle: 'Contact',
+    contactText: '',
     contactBusiness: 'Sans Mushroom Box',
     contactLocation: 'Payyanangadi, Tirur',
     contactCallLabel: 'Call Now',
     contactWhatsAppLabel: 'WhatsApp Us',
-    footerText: '© 2026 സാൻസ് മഷ്റൂം ബോക്സ്. എല്ലാ അവകാശങ്ങളും വെച്ചിരിക്കുന്നു.'
+    footerText: '© 2026 Sans Mushroom Box. All rights reserved.'
   }
 };
 
@@ -330,7 +330,8 @@ const dishes = [
         'Salt, Oil, and Black pepper powder (to taste)'
       ],
       steps: [
-        'Sauté the chopped shallots, green chillies, and sliced mushrooms in a little oil. Whisk the egg thoroughly with milk, black pepper powder, salt, and curry leaves. Combine the whisked egg with the sautéed mushroom mixture, pour into a hot pan, and cook until a fluffy omelette is formed.'
+        'Sauté the chopped shallots, green chillies, and sliced mushrooms in a little oil. Whisk the egg thoroughly with milk, black pepper powder, salt, and curry leaves. Combine the whisked egg with the sautéed mushroom mixture, pour into a hot pan, and cook until a fluffy omelette is formed.',
+        'In addition, many varieties can be made using mushrooms such as Mushroom Fry, Mushroom, Chilli, Masala Fry, Mushroom Sandwich, Chilli Mushroom, Mushroom Bajji etc.'
       ]
     },
     ml: {
@@ -375,7 +376,9 @@ function renderRecipe() {
   document.getElementById('videos-text').textContent = data.videosText;
   document.getElementById('videos-link').textContent = data.videosLinkLabel;
   document.getElementById('contact-title').textContent = data.contactTitle;
-  document.getElementById('contact-text').textContent = data.contactText;
+  const contactTextEl = document.getElementById('contact-text');
+  contactTextEl.textContent = data.contactText;
+  contactTextEl.hidden = !data.contactText;
   document.getElementById('contact-business').textContent = data.contactBusiness;
   document.getElementById('contact-location').textContent = data.contactLocation;
   document.getElementById('contact-call').textContent = data.contactCallLabel;

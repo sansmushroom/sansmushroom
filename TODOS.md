@@ -117,4 +117,11 @@
 - [x] 18. CONTENT.ML BRANDING VALUES
   - [x] Updated header, location, phone, contactBusiness, contactLocation in content.ml to use non-transliterated English values.
   - [x] All other Malayalam text in content.ml preserved unchanged.
-  - [x] English content object (content.en) not touched.
+  - [x] English content object (content.en) not touched.
+
+- [x] 19. ENGLISH RECIPE TRANSLATION UPDATE
+  - [x] Translated all 7 English recipes in dishes[].en from final approved Malayalam source.
+  - [x] Preserved recipe order, object structure, property names, and array lengths.
+  - [x] Preserved ingredient order, quantities, and cooking steps exactly.
+  - [x] Used natural English cooking terminology while preserving exact meaning.
+  - [x] Did not modify any Malayalam (ml) recipes, content, HTML, CSS, JavaScript logic, IDs, variables, images, or videos.
