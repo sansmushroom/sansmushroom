@@ -5,6 +5,7 @@ const content = {
     heroTitle: 'Sans Mushroom Box',
     heroDescription: '',
     heroCta: 'See the recipe',
+    heroOrder: 'Order Now',
     recipeTitle: 'Recipe',
     downloadLabel: 'Download Recipe PDF',
     ingredientsLabel: 'Ingredients',
@@ -16,22 +17,22 @@ const content = {
     phone: 'Mob: 8156808790',
     healthBenefitsLabel: 'Health Benefits',
     healthBenefits: [
-      'Rich in nutrients',
-      'Fights cholesterol',
-      'Boosts immunity',
-      'Low sodium',
-      'Healthy gut',
-      'Brain health',
-      'Rich source of Vitamin D'
+      'Reduces cancer risk',
+      'Low in sodium',
+      'Promotes healthy cholesterol levels',
+      'Supports brain health',
+      'Good source of Vitamin D',
+      'Promotes a healthy gut',
+      'Supports a healthy immune system'
     ],
     cookingRulesLabel: '',
     cookingRules: [],
     galleryTitle: 'Photo gallery',
-    tutorialTitle: 'Grow tutorial',
+    tutorialTitle: 'How to Grow Mushrooms',
     videosTitle: 'More videos',
     videosText: 'Visit our YouTube channel for more growing tips, mushroom recipes, and behind-the-scenes updates.',
     videosLinkLabel: 'Watch on YouTube',
-    contactTitle: 'Contact & trust',
+    contactTitle: 'Contact',
     contactText: 'Small-batch mushrooms, warm kitchen tips, and friendly guidance from home to table.',
     contactBusiness: 'Sans Mushroom Box',
     contactLocation: 'Payyanangadi, Tirur',
@@ -44,39 +45,40 @@ const content = {
     heroEyebrow: '',
     heroTitle: 'Sans Mushroom Box',
     heroDescription: '',
-    heroCta: 'റസിപ്പി കാണൂ',
-    recipeTitle: 'റസിപ്പി',
-    downloadLabel: 'റസിപ്പി പിഡിഎഫ് ഡൗൺലോഡ് ചെയ്യൂ',
+    heroCta: 'See the Recipe',
+    heroOrder: 'ഓർഡർ ചെയ്യൂ',
+    recipeTitle: 'Recipe',
+    downloadLabel: 'Download Recipe PDF',
     ingredientsLabel: 'ഇനങ്ങൾ',
     stepsLabel: 'ഘട്ടങ്ങൾ',
-    viewRecipeLabel: 'റസിപ്പി കാണൂ →',
+    viewRecipeLabel: 'View Recipe →',
     videoFallbackText: 'നിങ്ങളുടെ ബ്രൗസർ വീഡിയോ ടാഗ് പിന്തുണയ്ക്കുന്നില്ല.',
-    header: 'സാൻസ് ഡെയ്ലി ഫ്റഷ്',
-    location: 'പയ്യാനങ്ങാടി, തിരൂർ',
-    phone: 'മൊബൈൽ: 8156808790',
-    healthBenefitsLabel: 'ആരോഗ്യ ഗുണങ്ങൾ',
+    header: 'SANS DAILY FRESH',
+    location: 'Payyanangadi, Tirur',
+    phone: 'Mob: 8156808790',
+    healthBenefitsLabel: 'കുണിന്റെ ഗുണങ്ങൾ',
     healthBenefits: [
-      'പൊരുളേറിയവ',
-      'കൊളസ്റോൾയ്ക്കെതിരായവ',
-      'ഇമ്മ്യൂണിറ്റി വർദ്ധിപ്പിക്കുന്നവ',
-      'കുറഞ്ഞ സോഡിയം',
-      'ആരോഗ്യകരമായ കുടൽ',
-      'മനസിന്റെ ആരോഗ്യവും',
-      'വിറ്റാമിൻ ഡി നിറഞ്ഞവ'
+      'ക്യാൻസർ സാധ്യത കുറക്കുന്നു.',
+      'കുറഞ്ഞ അളവിലുള്ള സോഡിയം എടുക്കുന്നു.',
+      'കുറഞ്ഞ കൊളസ്ട്രോൾ പ്രോത്സാഹിപ്പിക്കുന്നു.',
+      'തലച്ചോറിന്റെ ആരോഗ്യം സംരക്ഷിക്കുന്നു.',
+      'വിറ്റാമിൻ ഡിയുടെ ഉറവിടം നൽകുന്നു.',
+      'ആരോഗ്യകരമായ കുടലിനെ ഉത്തേജിപ്പിക്കുന്നു.',
+      'ആരോഗ്യകരമായ രോഗപ്രതിരോധ സംവിധാനത്തെ പിന്തുണക്കുന്നു.'
     ],
     cookingRulesLabel: '',
     cookingRules: [],
     galleryTitle: 'ചിത്രശാല',
-    tutorialTitle: 'വളർത്തൽ ട്യൂട്ടോറിയൽ',
+    tutorialTitle: 'കൂൺ എങ്ങനെ വളർത്താം',
     videosTitle: 'കൂടുതൽ വീഡിയോകൾ',
     videosText: 'കൂടുതൽ വളർത്തൽ ഉപകാരം, കൂൺ റസിപ്പികൾ, പിന്നണിയിൽ നിന്നുള്ള അധ്യായങ്ങൾക്കായി നമ്മുടെ യൂട്യൂബ് ചാനൽ കാണൂ.',
-    videosLinkLabel: 'യൂട്യൂബ് വീഡിയോകൾ കാണൂ',
-    contactTitle: 'സമ്പർക്കം & വിശ്വസനീയത',
+    videosLinkLabel: 'Watch on YouTube',
+    contactTitle: 'ബന്ധപ്പെടുക',
     contactText: 'ചെറുതായി വിളവെടുക്കുന്ന കൂൺ, ചൂടുള്ള പാചകനുറുക്കുകൾ, വീട്ടിൽ നിന്നും മേശയിലേക്കുള്ള സൗഹൃദവുമായോപദേശം.',
-    contactBusiness: 'സാൻസ് മഷ്റൂം ബോക്സ്',
-    contactLocation: 'പയ്യാനങ്ങാടി, തിരൂർ',
-    contactCallLabel: 'ഇപ്പോൾ വിളിക്കൂ',
-    contactWhatsAppLabel: 'വാട്ട്സ്ആപ്പ് അയക്കൂ',
+    contactBusiness: 'Sans Mushroom Box',
+    contactLocation: 'Payyanangadi, Tirur',
+    contactCallLabel: 'Call Now',
+    contactWhatsAppLabel: 'WhatsApp Us',
     footerText: '© 2026 സാൻസ് മഷ്റൂം ബോക്സ്. എല്ലാ അവകാശങ്ങളും വെച്ചിരിക്കുന്നു.'
   }
 };
@@ -362,6 +364,9 @@ function renderRecipe() {
   document.getElementById('hero-title').textContent = data.heroTitle;
   document.getElementById('hero-description').textContent = data.heroDescription;
   document.getElementById('hero-cta').textContent = data.heroCta;
+  const orderLink = document.getElementById('hero-order');
+  orderLink.textContent = data.heroOrder;
+  orderLink.href = 'https://wa.me/918156808790?text=' + encodeURIComponent('Hi! I would like to order mushrooms from Sans Mushroom Box.');
   document.getElementById('recipe-title').textContent = data.recipeTitle;
   document.getElementById('recipe-download').textContent = data.downloadLabel;
   document.getElementById('gallery-title').textContent = data.galleryTitle;

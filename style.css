@@ -239,6 +239,27 @@ section a {
   border-radius: 999px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.hero-actions a {
+  flex: 1 1 auto;
+  min-width: 140px;
+}
+
+.hero-order {
+  background: var(--color-accent) !important;
+}
+
+.hero-order:hover,
+.hero-order:focus-visible {
+  background: var(--color-primary) !important;
+}
+
 .hero-section a:hover,
 .recipe-section a:hover,
 section a:hover,
